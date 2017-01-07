@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hg2_bldg_control06a"
+		"hg2_bldg_control06b"
+		"mus1_bldg_control16"
+		"hg2_bldg_control011_floor"
+		"hg2_bldg_control13_floor"
+		"hg2_bldg_control14_pipes"
+		"mus1_bldg_control04"
+		"mus1_bldg_control02"
+		"mus1_bldg_control03"
+		"mus1_bldg_control09_tile"
+	}
+}

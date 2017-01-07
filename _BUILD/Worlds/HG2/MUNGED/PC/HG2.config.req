@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"dsk1_sky_dome"
+	}
+	REQN
+	{
+		"model"
+		"fel1_sky_dome_dusk"
+	}
+}

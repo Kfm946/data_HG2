@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Wohnhaus2etagen.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Wohnhaus2etagen"
+
+FoleyFXGroup    = "stone_foley"

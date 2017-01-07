@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tat2_bldg_set03"
+		"tat3_bldg_bunk"
+		"gitter"
+		"tat2_bldg_set05"
+		"walkwaywall"
+		"tat2_bldg_set07"
+		"eingang"
+		"floor"
+		"tat2_bldg_set04"
+		"tat2_bldg_set01"
+	}
+}

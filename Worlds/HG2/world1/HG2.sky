@@ -1,0 +1,50 @@
+SkyInfo()
+{
+	Enable(1);
+	FogColor(112,120,122,0);
+	WorldFogRange(20.0, 40.0);
+	FogRange(40.0, 100.0);
+	EnableFadeAdjustWithZoom(0);
+	PC()
+	{
+		NearSceneRange(15.000000, 55.000000, 35.000000, 85.000000);
+		//NearSceneRange(15.000000, 65.000000, 35.000000, 85.000000);
+		FarSceneRange(0.0, 40.0);
+		ReflectionFogColor(112,120,122,0);
+	}
+	
+}
+
+
+DomeInfo()
+{
+	Texture("dsk1_sky_dome.tga");
+	Angle(-90.000000);
+	Ambient(190.000000, 200.000000, 180.000000);
+	Softness(1);
+	SoftnessParam(65);
+
+	
+	DomeModel()
+	{
+		Geometry("fel1_sky_dome_dusk");
+	}
+
+	//DomeModel()
+	//{	
+	//	Geometry("yav_sky_dome_clouds");
+	//	rotationspeed(0.002, 0,0.5,0);	
+	//}
+}
+
+WaterInfo()
+{
+	TopColor(0, 0, 0);
+	BottomColor(0, 0, 0);
+	TopRange(30.000000);
+	BottomRange(10.000000);
+	BottomDrop(5.000000);
+	Enabled(1);
+}
+
+EnvTexture("");

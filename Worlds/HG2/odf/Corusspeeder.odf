@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"cor_fly_Speeder2.msh"
+
+
+[Properties]		
+
+GeometryName	=	"cor_fly_Speeder2"
+
+FoleyFXGroup    = "metal_foley"

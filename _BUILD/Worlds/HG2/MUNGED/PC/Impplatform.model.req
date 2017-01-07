@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"bridge"
+		"tat3_bldg_bunk"
+		"dea1_bldg_garbage_room_03"
+		"impwall"
+		"dea1_bldg_center_core_wall_01"
+	}
+}

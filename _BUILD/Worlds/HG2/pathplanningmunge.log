@@ -1,0 +1,16 @@
+Logging PathPlanningMunge
+03:50:2201/07/17
+Group 0: 0 arcs
+Group 1: 0 arcs
+Group 2: 2 arcs
+Group 3: 0 arcs
+Group 4: 0 arcs
+Group 5: 0 arcs
+Group 6: 0 arcs
+Group 7: 0 arcs
+WARNING[world1\HG2.PLN]:No dynamic arcs in group 1, moving group 3 to 1
+Group 1:
+  Connection_reg1
+  Connection_reg2
+   0 Errors    1 Warnings
+

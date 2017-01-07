@@ -1,0 +1,6 @@
+[GameObjectClass]		
+ClassLabel		=	"prop"
+GeometryName		= "rax_bldg_bghulk_3_reduce.msh"
+
+[Properties]
+GeometryName		= "rax_bldg_bghulk_3_reduce"

@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Kiste_alt.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Kiste_alt"
+
+FoleyFXGroup    = "metal_foley"

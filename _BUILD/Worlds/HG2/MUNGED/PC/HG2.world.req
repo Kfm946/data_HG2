@@ -1,0 +1,35 @@
+
+ucft
+{
+	REQN
+	{
+		"light"
+		"hg2"
+	}
+	REQN
+	{
+		"terrain"
+		"hg2"
+	}
+	REQN
+	{
+		"config"
+		"hg2"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+		"pol1_prop_hanger_shield"
+		"pol1_prop_hanger_shield_red"
+		"hg2_prop_reg_switch"
+		"impplatform"
+		"hg2_prop_hanger_shield"
+		"hg2_bldg_lobby"
+	}
+}

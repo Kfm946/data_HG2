@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Impplatform.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Impplatform"
+
+FoleyFXGroup    = "metal_foley"

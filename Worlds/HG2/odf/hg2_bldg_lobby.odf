@@ -1,0 +1,23 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"hg2_bldg_lobby.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_lobby"
+
+FoleyFXGroup    = "metal_foley"
+
+AttachEffect = "halo"
+AttachToHardPoint = "hp_light1"
+
+AttachEffect = "halo"
+AttachToHardPoint = "hp_light2"
+
+AttachEffect = "halo"
+AttachToHardPoint = "hp_light3"
+
+AttachEffect = "halo"
+AttachToHardPoint = "hp_light4"

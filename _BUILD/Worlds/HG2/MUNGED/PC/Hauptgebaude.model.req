@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tat2_bldg_set03"
+		"floor"
+		"walkwaywall"
+		"tat2_bldg_set07"
+		"noicon"
+		"tat3_bldg_bunk"
+		"tat2_bldg_set02"
+		"gitter"
+	}
+}

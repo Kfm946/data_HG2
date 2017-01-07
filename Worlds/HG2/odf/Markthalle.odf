@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Markthalle.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Markthalle"
+
+FoleyFXGroup    = "stone_foley"

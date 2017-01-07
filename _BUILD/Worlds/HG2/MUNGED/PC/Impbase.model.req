@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"dea1_bldg_hanger_floor"
+		"bridge"
+		"dea1_bldg_bridge_floor01"
+		"impwall"
+		"dea1_bldg_hanger_walla"
+		"tat3_bldg_bunk"
+	}
+}

@@ -1,0 +1,3 @@
+WARNING[pathplanningmunge world1\HG2.PLN]:No dynamic arcs in group 1, moving group 3 to 1
+   0 Errors    1 Warnings
+

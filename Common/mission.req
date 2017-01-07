@@ -1,0 +1,39 @@
+ucft
+{
+    REQN
+    {
+        "config"
+        "ingame_movies"	
+    }
+
+    REQN
+    {
+        "script"
+        "setup_teams"
+        "gametype_conquest"
+        "gametype_capture"
+        "HG2PlayerManagement"
+        "Objective"
+        "MultiObjectiveContainer"
+        "ObjectiveCTF"
+        "ObjectiveAssault"
+        "ObjectiveSpaceAssault"
+        "ObjectiveConquest" 
+        "ObjectiveTDM"
+        "ObjectiveOneFlagCTF"
+	"SoundEvent_ctf"
+        "ObjectiveGoto"        
+        "LinkedShields"
+        "LinkedDestroyables"
+        "LinkedTurrets"
+        "Ambush"
+        "PlayMovieWithTransition"
+    }
+
+    REQN
+    {
+        "lvl"
+        "HG2g_con"
+        "HG2c_con"
+    }
+}

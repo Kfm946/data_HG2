@@ -1,0 +1,13 @@
+ucft
+{
+	REQN
+	{
+		"congraph"
+		"HG2_conquest"
+	}
+	REQN
+	{
+		"world"
+		"HG2_conquest"
+	}
+}

@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Spaceportsideentry.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Spaceportsideentry"
+
+FoleyFXGroup    = "stone_foley"

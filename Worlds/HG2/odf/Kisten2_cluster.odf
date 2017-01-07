@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Kisten2_cluster.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Kisten2_cluster"
+
+FoleyFXGroup    = "metal_foley"

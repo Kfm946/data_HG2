@@ -1,0 +1,46 @@
+ucft
+{
+    REQN
+    {
+		"hg2_item_powerup_armor"
+		"hg2_bldg_center_core_floor"
+		"hg2_bldg_radarwall_7"
+		"hg2_bldg_platform_grate01"
+		"item_powerup_healfa"
+		"item_powerup_health_invin"
+		"item_powerup_health_1hk"
+		"item_powerup_fullre"		
+		"item_powerup_armr"
+		"flag_team_carried"
+		"flag_carried"
+        "flag_icon"
+		"hud_player_captured_flag"
+		"hud_target_flag_onscreen"
+		"flag_dropped"
+		"hud_flag_icon"
+        "hud_flag_timer"
+		"hgs_con_icon"
+    }
+
+    REQN
+    {
+        "model"
+		"hg2_item_powerup_armor"
+		"item_powerup_health_1hk"
+		"item_powerup_health_inv"
+		"item_powerup_fullre"
+		"com_item_powerup_shield"
+		"com_item_powerup_dual_fake"
+    }
+
+    REQN
+    {
+        "class"
+        "com_item_powerup_dual2"
+		"com_item_powerup_dual_fake"
+		"com_item_powerup_onehit"
+		"com_item_powerup_inv"
+		"com_item_powerup_full"
+		"com_item_powerup_armor"
+    }
+}

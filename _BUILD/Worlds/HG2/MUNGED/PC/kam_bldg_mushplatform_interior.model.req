@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"kam_bldg_interior_floors"
+		"kam_bldg_chamber_floor"
+		"kam_bldg_interior_walls"
+		"kam_bldg_interior_ceiling"
+		"kam_bldg_domewalls"
+		"kam_bldg_chamber_walls_open_"
+		"kam_bldg_rails"
+	}
+}

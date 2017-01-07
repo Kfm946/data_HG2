@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"hg2_bldg_lobby"
+	}
+	REQN
+	{
+		"config"
+		"halo"
+	}
+}

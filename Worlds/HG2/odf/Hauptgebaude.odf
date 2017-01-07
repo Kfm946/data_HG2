@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"Hauptgebaude.msh"
+
+
+[Properties]		
+
+GeometryName	=	"Hauptgebaude"
+
+FoleyFXGroup    = "stone_foley"

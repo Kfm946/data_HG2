@@ -1,0 +1,19 @@
+[GameObjectClass]
+ClassLabel = "flag"
+GeometryName = "hg2_item_powerup_armor.msh"
+GeometryScale = 0.15
+
+[Properties]
+Lighting        = "Dynamic"
+GeometryName    = "hg2_item_powerup_armor"
+CarriedGeometryName    = "hg2_item_powerup_armor"
+CarriedOffset      = "0.0 0.0 0.0"
+CarriedColorize      = 0
+DroppedColorize      = 0
+
+LifeSpan			= 5.0
+
+PickupSound         = "com_weap_powerup_pickup defer"
+DropSound         = ""
+AmbientSound      = ""
+

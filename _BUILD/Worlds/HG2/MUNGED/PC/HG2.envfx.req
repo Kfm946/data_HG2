@@ -1,0 +1,23 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"lightning"
+		"fogcloud"
+		"water"
+		"precipitation"
+		"hdr"
+	}
+	REQN
+	{
+		"texture"
+		"fluffy"
+		"dea1_water"
+		"water_normalmap_"
+		"water_bumpmap_"
+		"water_specularmask_"
+		"fx_pollen"
+	}
+}
