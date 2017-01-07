@@ -1,0 +1,10 @@
+.settings/
+_LVL_PC/
+Animations/
+assets/
+Editor/
+SWBF2-Lua-API-master/
+.buildpath
+.project
+Battlefront2API.doclua
+zeroeditor.exe
