@@ -58,10 +58,10 @@ function ScriptPostLoad()
 	 --normal mission script stuff  
     
     --This defines the CPs.  These need to happen first
-    cp1 = CommandPost:New{name = "cp1"}
-    cp2 = CommandPost:New{name = "cp2"}
-    cp3 = CommandPost:New{name = "cp3"}
-    cp4 = CommandPost:New{name = "cp4"}
+    cp1 = CommandPost:New{name = "cp_suburb"}
+    cp2 = CommandPost:New{name = "cp_heights"}
+    cp3 = CommandPost:New{name = "cp_canyon"}
+    cp4 = CommandPost:New{name = "cp_slums"}
     cp_center = CommandPost:New{name = "cp_center"}
     cp_t1spawn = CommandPost:New{name = "cp_t1spawn"}
     cp_t2spawn = CommandPost:New{name = "cp_t2spawn"}
@@ -181,26 +181,30 @@ function ScriptPostLoad()
   --deactivate registration regions 
   DeactivateRegion("registration1")
   DeactivateRegion("registration2")
+  ActivateRegion("exp_region")
   
   BlockPlanningGraphArcs("Connection_reg1");
   BlockPlanningGraphArcs("Connection_reg2");
 
   --set up lobby shields
-  ActivateObject("reg_shield_blue1")
-  ActivateObject("reg_shield_blue2")
-  ActivateObject("reg_shield_red1")
-  ActivateObject("reg_shield_red2")
-  ActivateObject("exp_shield_blue1")
-  ActivateObject("exp_shield_blue2")
-  ActivateObject("exp_shield_red1")
-  ActivateObject("exp_shield_red2")
+--  print("Activating shields")
+--  ActivateObject("reg_shield_blue1")
+--  ActivateObject("reg_shield_blue2")
+--  ActivateObject("reg_shield_red1")
+--  ActivateObject("reg_shield_red2")
+--  ActivateObject("exp_shield_blue1")
+--  ActivateObject("exp_shield_blue2")
+--  ActivateObject("exp_shield_red1")
+--  ActivateObject("exp_shield_red2")
 
   KillObject("exp_shield_red1")
   KillObject("exp_shield_red2")
   KillObject("reg_shield_blue1")
   KillObject("reg_shield_blue2")
-  print("Done killing shields")
   
+  --make CPs uncapturable
+  SetClassProperty("com_bldg_controlzone", "NeutralizeTime", 999999)
+  SetClassProperty("com_bldg_controlzone", "CaptureTime", 999999)
   
   VisualTimer = CreateTimer("VisualTimer")  --only one timer will be displayed 
   ShowTimer(VisualTimer)            --it will be stopped/started/reset to reflect the timers that control the actual game functions
@@ -214,7 +218,7 @@ function ScriptPostLoad()
   --set shield pickup function
   OnFlagPickUp(
     function(flag, character)
-      print("\nCALLED OnFlagPickup() with args:", flag, character) 
+      print("\nOnFlagPickup() with args:", flag, character) 
       local charPtr = GetCharacterUnit(character)
        
       if GetEntityClass(flag) == FindEntityClass("com_item_powerup_armor") then
@@ -235,7 +239,7 @@ function ScriptPostLoad()
     
   OnCharacterDeath( --THIS could happen anywhere, in or oustide the arena
     function(character, killer)
-      print("\nCALLED OnCharacterDeath() with args:", character, killer) 
+      print("\nOnCharacterDeath() with args:", character, killer) 
       if not character then print("\tNobody died...? Returning...") return
       --even if a guy dies, we still need to de-register him and stuff. 
       elseif not PlayerManager:PlayerExists(character)then 
@@ -260,7 +264,19 @@ function ScriptPostLoad()
     end
   )
   
-  
+  explore = OnEnterRegion(               
+    function(region, character)
+    print("\nOnEnterRegion() with args:", region, character) 
+    if (game_state > IDLE) then return end  
+    
+    print("\tTeleporting player to the arena to explore...")
+    local charUnit = GetCharacterUnit(character)
+    SetEntityMatrix(charUnit, teleCenter)
+    PlayerManager:SetIsExploring(character, true)
+      
+    end,
+    "exp_region"
+  )
   
   
 ---//**************************************************************\\
@@ -275,7 +291,7 @@ function ScriptPostLoad()
   
   charSpawn = OnCharacterSpawn(
     function(character)
-      print("\nCALLED OnCharacterSpawn() with args:", character) 
+      print("\nOnCharacterSpawn() with args:", character) 
       local charUnit = GetCharacterUnit(character)
       print("\tTaking away their sheilds")
       --TODO: Figure out what's wrong with this
@@ -289,7 +305,9 @@ function ScriptPostLoad()
   
   regSwitch = OnObjectKill(
     function(object, killer)
-      print("\nCALLED OnObjectKill() with args:", object, killer) 
+      if (killer ~= nil) then
+        print("\nOnObjectKill() with args:", object, killer)
+      end 
       --TODO: Teleport exploring players back to lobby.
       local name = GetEntityName(object)
       if name == "reg_switch" then
@@ -332,12 +350,14 @@ function ScriptPostLoad()
           --Activate regions and start timers
           ActivateRegion("registration1")
           ActivateRegion("registration2")
+          DeactivateRegion("exp_region")
           UnblockPlanningGraphArcs("Connection_reg1");
           UnblockPlanningGraphArcs("Connection_reg2");
           DisableBarriers("Barrier_reg1");
           DisableBarriers("Barrier_reg2");
           
           SwitchShields(true)
+          PlayerManager:ReturnExploringPlayers(teleLobby)
           
           StartTimer(registrationTimer)
           StartTimer(VisualTimer)
@@ -359,7 +379,7 @@ function ScriptPostLoad()
     
   regTele1 = OnEnterRegion(               
     function(region, character)
-    print("\nCALLED OnEnterRegion() with args:", region, character) 
+    print("\nOnEnterRegion() with args:", region, character) 
     if game_state == REG then
       print("\tA player has entered the 1st registration region.")
       --deactivating regions temporarily to prevent double-registration
@@ -417,7 +437,7 @@ function ScriptPostLoad()
   
   regTele2 = OnEnterRegion(               
     function(region, character)
-    print("\nCALLED OnEnterRegion() with args:", region, character)
+    print("\nOnEnterRegion() with args:", region, character)
     if game_state == REG then
       print("\tA player has entered the 2nd registration region.")
       --deactivating regions temporarily to prevent double-registration
@@ -475,7 +495,7 @@ function ScriptPostLoad()
     
   registerExpire = OnTimerElapse(
     function(timer)
-      print("\nCALLED OnTimerElapse(registrationTimer)") 
+      print("\nOnTimerElapse(registrationTimer)") 
       --if there are enough players registered (more than 1), the games can start
       if (PlayerManager:GetNumRegistered() > 1) then
                 
@@ -559,7 +579,7 @@ function ScriptPostLoad()
     
     
   function ResetRegistration()
-    print("\nCALLED ResetRegistration()") 
+    print("\nResetRegistration()") 
     game_state = IDLE
     StopTimer(registrationTimer)
     StopTimer(VisualTimer)
@@ -575,6 +595,9 @@ function ScriptPostLoad()
     PlayerManager:ResetRegistration(teleLobby)
     DeactivateRegion("registration1")
     DeactivateRegion("registration2")
+    
+    --reenable exploration
+    ActivateRegion("exp_region")
       
     BlockPlanningGraphArcs("Connection_reg1");
     BlockPlanningGraphArcs("Connection_reg2");
@@ -654,7 +677,7 @@ function ScriptPostLoad()
   
   RulesElapse1 = OnTimerElapse(
     function(timer)
-      print("\nCALLED OnTimerElapse(RulesElapse1)") 
+      print("\nOnTimerElapse(RulesElapse1)") 
       print("The grace period has begun.\n")
       StartTimer(GraceTimer)
       PowerupSpawner(super_nodes)
@@ -715,7 +738,7 @@ function ScriptPostLoad()
   
   GraceElapse1 = OnTimerElapse(
     function(timer)
-      print("\nCALLED OnTimerElapse(GraceElapse1)") 
+      print("\nOnTimerElapse(GraceElapse1)") 
 
       game_state = GAMES
       print("\nThe Games have begun!\n")
@@ -1009,7 +1032,7 @@ end
 -- Manages spawning of normal/fake powerups
 -- 
 function PowerupSpawner(super_nodes)
-  print("\nCALLED PowerupSpawner()")
+  print("\nPowerupSpawner()")
   local powerupTable = {}
   
   --normal powerups

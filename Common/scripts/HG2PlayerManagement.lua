@@ -36,7 +36,8 @@ local HG2Player = {
   spamCount = 0,
   isCamping = false,
   campCount = 0,
-  hurtCount = 0
+  hurtCount = 0,
+  isExploring = false
 }
 
 
@@ -53,7 +54,7 @@ end
 -- @param #int character     character number
 -- @param #bool started    true if the games have started and the player needs a rank
 function HG2PlayerManagement:AddPlayer(character, _unit, _team)
-  print("\nCALLED HG2PlayerManagement:AddPlayer() with args:", character, _unit, _team) 
+  print("\nHG2PlayerManagement:AddPlayer() with args:", character, _unit, _team) 
   self.players_alive[character] = nil 
   self.players_alive[character] = HG2Player:New{
     char = character,
@@ -70,7 +71,7 @@ end
 -- @param #int character     character number
 -- @param #bool started    true if the games have started and the player needs a rank
 function HG2PlayerManagement:RemovePlayer(character, started)
-  print("\nCALLED HG2PlayerManagement:RemovePlayer(character, started) with args:", character, started) 
+  print("\nHG2PlayerManagement:RemovePlayer(character, started) with args:", character, started) 
   self.players_alive[character] = nil
   self.num_alive = self.num_alive - 1
   if started then
@@ -86,7 +87,7 @@ end
 --
 -- @param #int character     character number
 function HG2PlayerManagement:RegisterPlayer(character)
-  print("\nCALLED HG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
+  print("\nHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
   self.players_alive[character].registered = true
   self.num_registered = self.num_registered + 1
 end
@@ -96,7 +97,7 @@ end
 --
 -- @param #int character     character number
 function HG2PlayerManagement:DeRegisterPlayer(character)
-  print("\nCALLED HG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
+  print("\nHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
   self.players_alive[character].registered = false
   self.num_registered = self.num_registered - 1
 end
@@ -110,12 +111,21 @@ function HG2PlayerManagement:IsSpammingSwitch(character)
   return self.players_alive[character].spamCount
 end
 
+--------------------------------------------------------------
+-- Called on player death, removes player from self.players_alive and sets rank if needed
+--
+-- @param #int character     character number
+function HG2PlayerManagement:SetIsExploring(character, status)
+  print("\nHG2PlayerManagement:SetIsExploring(character) with args:", character, status) 
+  self.players_alive[character].isExploring = status
+end
+
 
 --------------------------------------------------------------
 -- Called when the grace period begins 
 --    Kills all players with registered == false
 function HG2PlayerManagement:KillUnregisteredPlayers()
-  print("\nCALLED HG2PlayerManagement:KillUnregisteredPlayers()") 
+  print("\nHG2PlayerManagement:KillUnregisteredPlayers()") 
   local i, v
   for i, v in pairs(self.players_alive) do
     print("\tChecking player: ", i)
@@ -132,12 +142,27 @@ function HG2PlayerManagement:KillUnregisteredPlayers()
   print("Done killing unregistered players.\n")
 end
 
+--------------------------------------------------------------
+-- Called when the registration needs to be reset
+--    Sets registered = false for all players alive
+function HG2PlayerManagement:ReturnExploringPlayers(teleLobby)
+  print("\nHG2PlayerManagement:ReturnExploringPlayers()") 
+  local i, v
+  for i, v in pairs(self.players_alive) do
+    if self.players_alive[i].isExploring == true then
+      print("\tReturning player:", i)
+      SetEntityMatrix(self.players_alive[i].unit, teleLobby)
+      self.players_alive[i].isExploring = false
+    end
+  end
+end
+
 
 --------------------------------------------------------------
 -- Called when the registration needs to be reset
 --    Sets registered = false for all players alive
 function HG2PlayerManagement:ResetRegistration(teleLobby)
-  print("\nCALLED HG2PlayerManagement:ResetRegistration()") 
+  print("\nHG2PlayerManagement:ResetRegistration()") 
   local i, v
   for i, v in pairs(self.players_alive) do
     if self.players_alive[i].registered == true then
@@ -175,10 +200,16 @@ function HG2PlayerManagement:GetNumRegistered() return self.num_registered end
 function HG2PlayerManagement:IsRegistered(character) return self.players_alive[character].registered end
 
 --------------------------------------------------------------
+-- Returns exploration status of character
+function HG2PlayerManagement:IsExploring(character) return self.players_alive[character].isExploring end
+
+
+--------------------------------------------------------------
 -- Returns registration status of character
 function HG2PlayerManagement:PlayerExists(character) return not (self.players_alive[character] == nil) end
 
 
+      
 
 
 --------------------------------------------------------------
@@ -188,7 +219,7 @@ function HG2PlayerManagement:PlayerExists(character) return not (self.players_al
 -- @param #int min_distance    min distance a player must move to avoid damage
 -- @param self.players_alive             table containing player info entries
 function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
-  print("\nCALLED HG2PlayerManagement:CamperKiller() with args:", min_distance, camp_time) 
+  print("\nHG2PlayerManagement:CamperKiller() with args:", min_distance, camp_time) 
    
    local CampCheck = function( player, unit )
       print("Checking player ", player)

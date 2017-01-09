@@ -1,5 +1,5 @@
 Version(1);
-RegionCount(7);
+RegionCount(10);
 
 Region("registration1", 0)
 {
@@ -17,36 +17,36 @@ Region("registration2", 0)
 	Name("registration2");
 }
 
-Region("cp1_capture", 2)
+Region("suburb_capture", 2)
 {
-	Position(-216.015289, 4.629235, -135.871857);
+	Position(147.702805, 4.743334, -138.895340);
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	Size(6.000000, 6.000000, 6.000000);
-	Name("cp1_capture");
+	Size(40.000000, 40.000000, 20.000000);
+	Name("suburb_captu");
 }
 
-Region("cp2_capture", 2)
+Region("heights_capture", 2)
 {
-	Position(-31.967234, 4.812834, -143.943726);
+	Position(186.857468, 15.849361, 218.760712);
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	Size(6.000000, 6.000000, 6.000000);
-	Name("cp2_capture");
+	Size(30.000000, 40.000000, 6.000000);
+	Name("heights_capture");
 }
 
-Region("cp3_capture", 2)
+Region("canyon_capture", 2)
 {
-	Position(-136.091614, 4.001449, -24.010523);
+	Position(-241.805542, 2.434665, 201.418091);
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	Size(6.000000, 6.000000, 6.000000);
-	Name("cp3_capture");
+	Size(30.000000, 40.000000, 6.000000);
+	Name("canyon_capture");
 }
 
-Region("cp4_capture", 2)
+Region("slums_capture", 2)
 {
-	Position(-128.005005, 4.267767, -247.931778);
+	Position(-151.449844, 0.982824, -178.707718);
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
-	Size(6.000000, 6.000000, 6.000000);
-	Name("cp4_capture");
+	Size(30.000000, 40.000000, 6.000000);
+	Name("slums_capture");
 }
 
 Region("null_region", 0)
@@ -55,4 +55,28 @@ Region("null_region", 0)
 	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
 	Size(0.100000, 0.100000, 0.100000);
 	Name("null_region");
+}
+
+Region("center_capture", 2)
+{
+	Position(0.000000, 0.000000, 0.000000);
+	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+	Size(40.000000, 50.000000, 40.000000);
+	Name("center_capture");
+}
+
+Region("exp_region", 0)
+{
+	Position(454.407349, -25.670397, 488.069214);
+	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+	Size(5.000000, 3.000000, 5.000000);
+	Name("exp_region");
+}
+
+Region("rainshadow", 0)
+{
+	Position(474.000000, -25.400686, 488.000000);
+	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+	Size(15.000000, 6.000000, 15.000000);
+	Name("rainshadow1");
 }
