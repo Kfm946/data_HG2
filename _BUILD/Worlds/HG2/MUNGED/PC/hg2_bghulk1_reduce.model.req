@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_bldg_wall_j"
+		"rax_bldg_hulk_c"
+		"rax_bldg_trash_b"
+		"rax_bldg_trash_a"
+		"rax_bldg_wall_b"
+		"rax_bldg_wire_a"
+		"rax_prop_crash_a"
+		"rax_prop_crash_b"
+	}
+}

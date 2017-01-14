@@ -1,0 +1,15 @@
+[GameObjectClass]		
+
+ClassLabel		=	"destructablebuilding"
+GeometryName	=	"hg2_bldg_central_shield.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_central_shield"
+DestroyedGeometryName   = "hg2_null"
+MaxHealth           = "999999.0"
+
+FoleyFXGroup    = "stone_foley"
+
+BuildingSound = "shield_hum"

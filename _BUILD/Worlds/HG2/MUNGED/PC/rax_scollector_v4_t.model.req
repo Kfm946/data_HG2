@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_scollector_4"
+		"rax_scollector_1"
+		"rax_scollector_2"
+		"rax_scollector_3"
+	}
+}

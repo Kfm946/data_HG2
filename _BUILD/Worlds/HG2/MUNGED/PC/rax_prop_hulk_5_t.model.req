@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_bldg_wire_a"
+		"rax_bldg_debris_b"
+		"rax_bldg_hulk_c"
+		"rax_bldg_hulk_b"
+	}
+}

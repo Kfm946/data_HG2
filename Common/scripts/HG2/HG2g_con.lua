@@ -197,10 +197,13 @@ function ScriptPostLoad()
 --  ActivateObject("exp_shield_red1")
 --  ActivateObject("exp_shield_red2")
 
-  KillObject("exp_shield_red1")
-  KillObject("exp_shield_red2")
   KillObject("reg_shield_blue1")
   KillObject("reg_shield_blue2")
+  KillObject("exp_shield_blue1")
+  KillObject("exp_shield_blue2")
+  RespawnObject("exp_shield_blue1")
+  RespawnObject("exp_shield_blue2")
+  KillObject("center_shield")
   
   --make CPs uncapturable
   SetClassProperty("com_bldg_controlzone", "NeutralizeTime", 999999)
@@ -559,21 +562,15 @@ function ScriptPostLoad()
     if (reg == true) then
       RespawnObject("reg_shield_blue1")
       RespawnObject("reg_shield_blue2")
-      KillObject("reg_shield_red1")
-      KillObject("reg_shield_red2")
       KillObject("exp_shield_blue1")
       KillObject("exp_shield_blue2")
-      RespawnObject("exp_shield_red1")
-      RespawnObject("exp_shield_red2")
+      RespawnObject("center_shield")
     else
       KillObject("reg_shield_blue1")
       KillObject("reg_shield_blue2")
-      RespawnObject("reg_shield_red1")
-      RespawnObject("reg_shield_red2")
       RespawnObject("exp_shield_blue1")
       RespawnObject("exp_shield_blue2")
-      KillObject("exp_shield_red1")
-      KillObject("exp_shield_red2")
+      KillObject("center_shield")
     end
   end
     

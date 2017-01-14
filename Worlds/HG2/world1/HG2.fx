@@ -40,12 +40,14 @@ Effect("Water")
 	WaterRingColor(148, 170, 192,255);
 	WaterWakeColor(192, 192, 192,255);
 	WaterSplashColor((192, 192, 192,255);
+	
+	DisableLowRes();
 
 	// PC parameters
 	PC()
 	{
-		Tile(8.0,8.0);
-		MainTexture("dea1_water");
+		Tile(2.0,2.0);
+		MainTexture("dag1_water");
 		LODDecimation(1);
 		RefractionColor(75, 80, 81, 225);
 		ReflectionColor(75,83,84,225);
@@ -55,9 +57,8 @@ Effect("Water")
 
 		NormalMapTextures("water_normalmap_",16,8.0);
 		BumpMapTextures("water_bumpmap_",16,8.0);
-		SpecularMaskTextures("water_specularmask_",25, 4);
-		SpecularMaskTile(8.0, 8.0);
-		SpecularMaskScrollSpeed(0.0,0.0);
+		SpecularMaskTextures("water_specularmask_",25, 2);
+		SpecularMaskTile(4.0, 4.0);
 		Velocity(0.01,0.01);
 
 	}

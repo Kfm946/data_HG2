@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_bldg_wall_10"
+		"rax_bldg_wall_09"
+		"neu_prop_harvester_glow_01"
+		"neu_prop_harvester_glow_02"
+	}
+}

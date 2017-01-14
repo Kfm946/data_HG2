@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_prop_crash_j"
+		"rax_prop_crash_b"
+		"rax_prop_crash_a"
+	}
+}

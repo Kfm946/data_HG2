@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_bldg_wall_01"
+		"rax_bldg_roof_a"
+		"rax_bldg_debris_b"
+		"rax_bldg_wall_05"
+		"rax_bldg_wall_10"
+		"rax_bldg_wall_11"
+	}
+}

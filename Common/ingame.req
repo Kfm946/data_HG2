@@ -20,6 +20,7 @@ ucft
 		"hud_flag_icon"
         "hud_flag_timer"
 		"hgs_con_icon"
+		"common_bldg_commandpost"
     }
 
     REQN

@@ -66,7 +66,7 @@ Connection("Connection_reg1")
 	Start("Hub3");
 	End("Hub4");
 	Flag(63);
-	Dynamic(3);
+	Dynamic(1);
 	OneWay();
 }
 
@@ -75,7 +75,7 @@ Connection("Connection_reg2")
 	Start("Hub2");
 	End("Hub5");
 	Flag(63);
-	Dynamic(3);
+	Dynamic(1);
 	OneWay();
 }
 

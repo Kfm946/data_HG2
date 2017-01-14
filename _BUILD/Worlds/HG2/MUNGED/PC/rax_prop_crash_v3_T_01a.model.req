@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_prop_crash_i"
+		"rax_prop_crash_j"
+		"rax_prop_crash_k"
+		"rax_prop_crash_d"
+		"rax_prop_crash_f"
+		"rax_prop_crash_h"
+		"rax_prop_crash_g"
+		"rax_prop_crash_a"
+		"rax_prop_crash_e"
+		"rax_prop_crash_c"
+		"rax_prop_crash_b"
+	}
+}

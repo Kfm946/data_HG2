@@ -1,0 +1,18 @@
+[GameObjectClass]		
+
+ClassLabel		=	"destructablebuilding"
+GeometryName	=	"hg2_bldg_lobby_shield_blue_nc.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_lobby_shield_blue_nc"
+DestroyedGeometryName   = "hg2_bldg_lobby_shield_red"
+MaxHealth           = "999999.0"
+
+VehicleCollision = "CLEAR"
+SoldierCollision = "CLEAR"
+
+FoleyFXGroup    = "stone_foley"
+
+BuildingSound = "shield_hum"

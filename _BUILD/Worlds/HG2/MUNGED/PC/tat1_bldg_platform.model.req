@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tat1_bldg_moist_platform_lowrez"
+		"tat1_bldg_moist_tank_lowrez"
+		"tat1_bldg_moist_platform"
+		"tat1_bldg_moist_tank"
+	}
+}

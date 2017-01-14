@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hg2_bldg_central_platform_top2"
+		"hg2_bldg_lavawalk"
+		"hg2_bldg_central_platform_top"
+		"hg2_bldg_control04"
+	}
+}

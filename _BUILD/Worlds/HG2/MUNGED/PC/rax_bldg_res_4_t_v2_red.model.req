@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rax_bldg_wall_05"
+		"rax_bldg_door_01"
+		"rax_bldg_roof_03"
+		"rax_bldg_wall_01"
+		"rax_bldg_roof_01"
+	}
+}
