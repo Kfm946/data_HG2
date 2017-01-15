@@ -186,17 +186,7 @@ function ScriptPostLoad()
   BlockPlanningGraphArcs("Connection_reg1");
   BlockPlanningGraphArcs("Connection_reg2");
 
-  --set up lobby shields
---  print("Activating shields")
---  ActivateObject("reg_shield_blue1")
---  ActivateObject("reg_shield_blue2")
---  ActivateObject("reg_shield_red1")
---  ActivateObject("reg_shield_red2")
---  ActivateObject("exp_shield_blue1")
---  ActivateObject("exp_shield_blue2")
---  ActivateObject("exp_shield_red1")
---  ActivateObject("exp_shield_red2")
-
+  --set up shields
   KillObject("reg_shield_blue1")
   KillObject("reg_shield_blue2")
   KillObject("exp_shield_blue1")
