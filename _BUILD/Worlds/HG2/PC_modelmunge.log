@@ -1,8 +1,34 @@
 Logging pc_ModelMunge
-03:26:3701/14/17
-Mesh: hg2_null
-Model cube
-Root cube
+21:22:3101/18/17
+Mesh: hg2_bldg_turbine_base
+Model turbine_frame
+Model turbine_frame_lowrez
+Model collision2
+Model sv_turbine_frame
+Root turbine_frame
+Matrix:
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+Name: sv_turbine_frame
+Parent: turbine_frame
+Matrix:
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+Name: collision2
+Parent: 
+Sibling: sv_turbine_frame
+Matrix:
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+Name: turbine_frame_lowrez
+Parent: 
+Sibling: collision2
 Matrix:
 1.000000 0.000000 0.000000 0.000000
 0.000000 1.000000 0.000000 0.000000

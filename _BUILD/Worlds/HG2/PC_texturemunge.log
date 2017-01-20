@@ -1,4 +1,10 @@
 Logging pc_TextureMunge
-03:26:3701/14/17
-   0 Errors    0 Warnings
+21:22:3101/18/17
+ERROR[msh\thumbnail\tan4_bldg_barracks_01.tga]:Targa type 10 not currently supported.
+ERROR[msh\thumbnail\tan4_bldg_barracks_01.tga]:Targa type 10 not currently supported.
+ [continuing]
+ERROR[msh\thumbnail\Tan4_bldg_engineroom_props.tga]:Targa type 10 not currently supported.
+ERROR[msh\thumbnail\Tan4_bldg_engineroom_props.tga]:Targa type 10 not currently supported.
+ [continuing]
+   4 Errors    0 Warnings
 

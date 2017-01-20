@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"hg2_bldg_turbine_R.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_turbine_R"
+
+FoleyFXGroup    = "metal_foley"

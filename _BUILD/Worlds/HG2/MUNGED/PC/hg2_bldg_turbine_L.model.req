@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hg2_bldg_pod02_room02"
+		"hg2_bldg_engineroom_01"
+		"hg2_bldg_barracks_01"
+		"hg2_bldg_pod_room04"
+		"hg2_bldg_engineroom_turbine"
+	}
+}
