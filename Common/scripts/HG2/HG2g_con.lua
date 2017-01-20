@@ -248,9 +248,9 @@ function ScriptPostLoad()
       
       --2. If the games have started, then this player must be assigned a rank
       else
-        print("\tThe games have started, adding the player to players_eliminated")
+        print("\tThe games have started, giving player their rank")
         addPointsToChar(character, PlayerManager:RemovePlayer(character, true))
-        print("\tThere are now this many players alive: ", PlayerManager:GetNumAlive())
+        EndGameCheck()
         
         --SafetyCheck()
       end
@@ -672,7 +672,7 @@ function ScriptPostLoad()
       SetTimerValue(VisualTimer, 30)
       StartTimer(VisualTimer)
       
-      --TODO: Destroy invisible barrier.
+      KillObject("center_shield")
       
       --clean up previous timer
       ReleaseTimerElapse(RulesElapse2)
@@ -771,6 +771,35 @@ function ScriptPostLoad()
        end,
        "CamperKillerTimer"
     )
+    
+    PlayerCheckTimer = CreateTimer("PlayerCheckTimer")
+    SetTimerValue(PlayerCheckTimer , 20)
+    OnTimerElapse(
+       function(timer)
+          EndGameCheck()
+          SetTimerValue(PlayerCheckTimer, 20)
+          StartTimer(PlayerCheckTimer)
+       end,
+       "CamperKillerTimer"
+    )
+
+    
+    function EndGameCheck(self)
+      print("\nEndGameCheck()")
+      local winner = HG2PlayerManagement:PlayerCheck()
+      if (winner > -1) then
+        print("\tThe winner is:", winner)
+        addPointsToChar(winner, 100)
+        local charUnit = GetCharacterUnit(winner)
+        SetProperty(charUnit, "Team", 2)
+        SetProperty(charUnit, "PerceivedTeam", 2)
+        SetReinforcementCount(1, 1)
+        AddReinforcements(1, -1)
+        MissionVictory(2)
+        SetProperty(charUnit, "Team", 1)
+        SetProperty(charUnit, "PerceivedTeam", 1)
+      end
+    end
 
 
     print("Conquest is about to start")

@@ -1,8 +1,0 @@
-ERROR[PC_texturemunge msh\thumbnail\tan4_bldg_barracks_01.tga]:Targa type 10 not currently supported.
-ERROR[PC_texturemunge msh\thumbnail\tan4_bldg_barracks_01.tga]:Targa type 10 not currently supported.
- [continuing]
-ERROR[PC_texturemunge msh\thumbnail\Tan4_bldg_engineroom_props.tga]:Targa type 10 not currently supported.
-ERROR[PC_texturemunge msh\thumbnail\Tan4_bldg_engineroom_props.tga]:Targa type 10 not currently supported.
- [continuing]
-   4 Errors    0 Warnings
-

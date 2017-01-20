@@ -54,7 +54,7 @@ end
 -- @param #int character     character number
 -- @param #bool started    true if the games have started and the player needs a rank
 function HG2PlayerManagement:AddPlayer(character, _unit, _team)
-  print("\nHG2PlayerManagement:AddPlayer() with args:", character, _unit, _team) 
+  print("\tHG2PlayerManagement:AddPlayer() with args:", character, _unit, _team) 
   self.players_alive[character] = nil 
   self.players_alive[character] = HG2Player:New{
     char = character,
@@ -62,6 +62,7 @@ function HG2PlayerManagement:AddPlayer(character, _unit, _team)
     team = _team
   }
   self.num_alive = self.num_alive + 1
+  print("\tNew player count:", self.num_alive)
 end
 
 
@@ -71,13 +72,14 @@ end
 -- @param #int character     character number
 -- @param #bool started    true if the games have started and the player needs a rank
 function HG2PlayerManagement:RemovePlayer(character, started)
-  print("\nHG2PlayerManagement:RemovePlayer(character, started) with args:", character, started) 
+  print("\tHG2PlayerManagement:RemovePlayer(character, started) with args:", character, started) 
   self.players_alive[character] = nil
   self.num_alive = self.num_alive - 1
   if started then
     self.players_eliminated[character] = {char = character, rank = -(self.num_alive + 1)}
     return self.players_eliminated[character].rank
   else return 0 end
+  print("\tNew player count:", self.num_alive)
 end
 
 
@@ -87,7 +89,7 @@ end
 --
 -- @param #int character     character number
 function HG2PlayerManagement:RegisterPlayer(character)
-  print("\nHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
+  print("\tHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
   self.players_alive[character].registered = true
   self.num_registered = self.num_registered + 1
 end
@@ -97,7 +99,7 @@ end
 --
 -- @param #int character     character number
 function HG2PlayerManagement:DeRegisterPlayer(character)
-  print("\nHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
+  print("\tHG2PlayerManagement:DeRegisterPlayer(character) with args:", character) 
   self.players_alive[character].registered = false
   self.num_registered = self.num_registered - 1
 end
@@ -116,7 +118,7 @@ end
 --
 -- @param #int character     character number
 function HG2PlayerManagement:SetIsExploring(character, status)
-  print("\nHG2PlayerManagement:SetIsExploring(character) with args:", character, status) 
+  print("\tHG2PlayerManagement:SetIsExploring(character) with args:", character, status) 
   self.players_alive[character].isExploring = status
 end
 
@@ -125,32 +127,38 @@ end
 -- Called when the grace period begins 
 --    Kills all players with registered == false
 function HG2PlayerManagement:KillUnregisteredPlayers()
-  print("\nHG2PlayerManagement:KillUnregisteredPlayers()") 
+  print("\tHG2PlayerManagement:KillUnregisteredPlayers()") 
   local i, v
   for i, v in pairs(self.players_alive) do
-    print("\tChecking player: ", i)
+    print("\t\tChecking player: ", i)
     if self.players_alive[i] == nil then
-      print("\tSomething went wrong, this player doesn't exist!")
+      print("\t\tSomething went wrong, this player doesn't exist!")
     elseif GetCharacterUnit(i) == nil then
-      print("\tThis player's not alive or something.")
+      print("\t\tThis player's not alive or something.")
+      self.players_alive[i] = nil
     elseif self.players_alive[i].registered == false then
-      print("\tThis player is not registered, kill them.")
+      print("\t\tThis player is not registered, kill them.")
+      SetProperty(self.players_alive[i].unit, "Team", 2)
+      SetProperty(self.players_alive[i].unit, "PerceivedTeam", 2)
       KillObject(self.players_alive[i].unit)
       self.players_alive[i] = nil
+    else
+      SetProperty(self.players_alive[i].unit, "Team", 1)
+      SetProperty(self.players_alive[i].unit, "PerceivedTeam", 1)
     end
   end
-  print("Done killing unregistered players.\n")
+  print("\tDone killing unregistered players.")
 end
 
 --------------------------------------------------------------
 -- Called when the registration needs to be reset
 --    Sets registered = false for all players alive
 function HG2PlayerManagement:ReturnExploringPlayers(teleLobby)
-  print("\nHG2PlayerManagement:ReturnExploringPlayers()") 
+  print("\tHG2PlayerManagement:ReturnExploringPlayers()") 
   local i, v
   for i, v in pairs(self.players_alive) do
     if self.players_alive[i].isExploring == true then
-      print("\tReturning player:", i)
+      print("\t\tReturning player:", i)
       SetEntityMatrix(self.players_alive[i].unit, teleLobby)
       self.players_alive[i].isExploring = false
     end
@@ -162,17 +170,43 @@ end
 -- Called when the registration needs to be reset
 --    Sets registered = false for all players alive
 function HG2PlayerManagement:ResetRegistration(teleLobby)
-  print("\nHG2PlayerManagement:ResetRegistration()") 
+  print("\tHG2PlayerManagement:ResetRegistration()") 
   local i, v
   for i, v in pairs(self.players_alive) do
     if self.players_alive[i].registered == true then
-      print("\tDeregistered player:", i)
+      print("\t\tDeregistered player:", i)
       self.players_alive[i].registered = false
       SetEntityMatrix(self.players_alive[i].unit, teleLobby)
     end
   end
   self.num_registered = 0
 end
+
+
+--------------------------------------------------------------
+-- Called when a player dies or when playercheck timer expires
+--    Checks number of players alive and returns the char number
+--    of the last player alive if only 1 player is left alive
+function HG2PlayerManagement:PlayerCheck()
+  print("\tHG2PlayerManagement:PlayerCheck()")
+  local i, v, winner
+  self.num_alive = 0
+  for i, v in pairs(self.players_alive) do
+    print("\t\tChecking player:", i)
+    if GetCharacterUnit(self.players_alive[i].char) ~= nil then
+      self.num_alive = self.num_alive + 1
+      winner = self.players_alive[i].char
+    else
+      print("\t\t\tPlayer in list is not alive, removing them:", i)
+      self.players_alive[i] = nil
+    end
+  end
+  print("\t"..self.num_alive.." players remaining.")
+  --if more than 1 player is left, return -1, else return winner char #
+  if self.num_alive > 1 then return -1
+  else return winner end
+end    
+
 
 function HG2PlayerManagement:PrintPlayerInfo(character)
   print("\tPlayer "..character..":")
@@ -222,7 +256,7 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
   print("\nHG2PlayerManagement:CamperKiller() with args:", min_distance, camp_time) 
    
    local CampCheck = function( player, unit )
-      print("Checking player ", player)
+      print("\tChecking player ", player)
       if (player == nil) or (unit == nil) then return end   --check input
       local x, y, z = GetWorldPosition(unit)
       local currentPosition = {x, y, z}
@@ -231,13 +265,12 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
       
       --start tracking a new player
       if self.unit_locations[player] == nil then
-         print("\tStarting to track player")
+         print("\t\tStarting to track player")
          self.unit_locations[player] = currentPosition
          --PrintMatrix(self.unit_locations[player])
          return
       else
          --previous location = last stored location
-         print("\tPlayer is already being tracked.")
          previousPosition = self.unit_locations[player]
       end
      
@@ -245,14 +278,13 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
       if math.abs(previousPosition[1] - currentPosition[1]) < min_distance
          and math.abs(previousPosition[2] - currentPosition[2]) < 20
          and math.abs(previousPosition[3] - currentPosition[3]) < min_distance then
-         print("\tPlayer has not moved.")
          --they've now been stationary for another interval, raise interval count
          self.players_alive[player].campCount = self.players_alive[player].campCount + 1
-         print("\tPlayer has been in stationary for this many intervals:", self.players_alive[player].campCount)
+         print("\t\tPlayer has been stationary for this many intervals:", self.players_alive[player].campCount)
          
          --If they've been camping for long enough, then they're in trouble.
          if self.players_alive[player].campCount >= (camp_time/10) then
-            print("\tPlayer is camping, applying health degen.")
+            print("\t\tPlayer is camping, applying health degen.")
             
             --They might have full health, so the health degen has to be triggered; take away 1 health unit
             if self.players_alive[player].hurtCount == 0 then
@@ -273,7 +305,7 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
          return
          
       else      -- their position has changed more than 10 units
-         print("\tPlayer has moved.")
+         print("\t\tPlayer has moved.")
          
          --if they WERE camping
          if self.players_alive[player].isCamping then
@@ -282,12 +314,11 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
             SetProperty(unit, "AddHealth", -5)
             
             --increase the number of intervals they've been hurt but moving
-            print("\tThe player was camping, so track amount of time they're still being hurt for.")
             self.players_alive[player].hurtCount = self.players_alive[player].hurtCount + 1
             
             --if they've kept moving while being hurt for 3 intervals, then they've had enough
             if self.players_alive[player].hurtCount > 3 then
-               print("\tThey've kept moving, so stop hurting them and reset their info.")
+               print("\t\tThey've kept moving, so stop hurting them and reset their info.")
                -- reset everything
                SetProperty(unit, "AddHealth", 0)
                self.players_alive[player].isCamping = false
@@ -295,12 +326,11 @@ function HG2PlayerManagement:CamperKiller(min_distance, camp_time)
                self.players_alive[player].hurtCount = 0
             
             else   -- if they haven't been hurt for long enough, keep hurting them
-               print("\tPlayer has been hurt for "..self.players_alive[player].hurtCount.." intervals.")
+               print("\t\tPlayer has been hurt for "..self.players_alive[player].hurtCount.." intervals.")
             end
                
          end
             -- they've moved, so we need to record their new position
-            print("\tRecording their current position.\n")
             self.unit_locations[player] = currentPosition
          return
       end
