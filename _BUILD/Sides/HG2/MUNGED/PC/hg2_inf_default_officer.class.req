@@ -1,0 +1,18 @@
+
+ucft
+{
+	REQN
+	{
+		"animbank"
+		"bothanspy"
+	}
+	REQN
+	{
+		"class"
+		"hg2_inf_default"
+		"all_weap_inf_incinerator"
+		"all_weap_inf_invisibility"
+		"all_weap_inf_buff_health"
+		"all_weap_inf_timebomb"
+	}
+}

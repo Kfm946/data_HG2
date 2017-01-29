@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"hg2_inf_default"
+		"hg2_weap_inf_rifle"
+		"hg2_weap_inf_pistol"
+		"all_weap_inf_thermaldetonator"
+	}
+}

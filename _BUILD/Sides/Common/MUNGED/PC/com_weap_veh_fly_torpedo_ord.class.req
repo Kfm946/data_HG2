@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"large_cannon_impacts"
+		"com_sfx_watersplash_lg"
+		"com_sfx_protontorpedo"
+	}
+	REQN
+	{
+		"class"
+		"all_proton_torpedo"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"com_sfx_sabrehit"
+		"com_sfx_bif"
+		"com_sfx_zap"
+		"com_sfx_blammo"
+		"com_sfx_pow"
+		"com_sfx_sabredeflect"
+	}
+}

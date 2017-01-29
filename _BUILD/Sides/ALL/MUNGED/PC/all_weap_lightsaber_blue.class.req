@@ -1,0 +1,29 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"bluelightsabre"
+	}
+	REQN
+	{
+		"animset"
+		"human_sabre"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_lightsaber"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_lightsabre"
+	}
+	REQN
+	{
+		"config"
+		"all_hero_luke_jedi"
+	}
+}

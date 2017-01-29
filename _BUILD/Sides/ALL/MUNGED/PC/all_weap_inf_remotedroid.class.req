@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_weap_inf_remotedroid"
+		"all_weap_inf_remotedroid_ord"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+}

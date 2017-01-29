@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_orbital_strike_icon"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_droid_incinerator_ord"
+	}
+}

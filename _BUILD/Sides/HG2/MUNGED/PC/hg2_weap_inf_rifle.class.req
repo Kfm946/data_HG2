@@ -1,0 +1,23 @@
+
+ucft
+{
+	REQN
+	{
+		"animset"
+		"human_rifle"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_rifle"
+		"hg2_weap_inf_rifle_ord"
+		"hg2_weap_inf_rifle_tracer"
+		"com_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_rifle"
+		"all_1st_weap_inf_rifle"
+	}
+}

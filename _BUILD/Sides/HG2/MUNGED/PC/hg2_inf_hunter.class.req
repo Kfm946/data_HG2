@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"hg2_inf_default_hunter"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_bothanspy"
+		"all_inf_bothanspy_low1"
+	}
+}

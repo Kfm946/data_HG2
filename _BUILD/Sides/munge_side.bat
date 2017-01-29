@@ -72,6 +72,8 @@ configmunge -inputfile effects\*.fx %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -output
 move /y configmunge.log configmunge_fx.log
 configmunge -inputfile $*.combo %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -outputdir %MUNGE_DIR% 2>>%MUNGE_LOG%
 move /y configmunge.log configmunge_combo.log
+configmunge -inputfile $*.hud %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -outputdir %MUNGE_DIR% 2>>%MUNGE_LOG%
+move /y configmunge.log configmunge_hud.log
 %MUNGE_PLATFORM%_modelmunge -inputfile $*.msh %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -outputdir %MUNGE_DIR% 2>>%MUNGE_LOG%
 %MUNGE_PLATFORM%_texturemunge -inputfile $*.tga $*.pic %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -outputdir %MUNGE_DIR% 2>>%MUNGE_LOG%
 

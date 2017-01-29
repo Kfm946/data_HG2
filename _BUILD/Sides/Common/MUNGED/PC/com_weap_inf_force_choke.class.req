@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"anim"
+		"human_choking"
+	}
+	REQN
+	{
+		"config"
+		"choke"
+	}
+}

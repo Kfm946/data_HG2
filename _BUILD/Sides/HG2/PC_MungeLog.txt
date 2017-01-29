@@ -1,0 +1,26 @@
+WARNING[PC_modelmunge msh\all_1st_weap_inf_bowcaster.msh]:all_1st_weap_inf_bowcaster has 1178 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_bothanspy.msh]:all_inf_bothanspy has 2272 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_chewbacca.msh]:all_inf_chewbacca has 1460 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_deathstarleia.msh]:SplitSkinnedSegments: WARNING: out of space in splitting catalog!
+WARNING[PC_modelmunge msh\all_inf_deathstarleia.msh]:all_inf_deathstarleia has 1872 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_engineer.msh]:all_inf_engineer has 2573 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_hothlukeskywalker.msh]:all_inf_hothlukeskywalker has 1262 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_luke.msh]:all_inf_luke has 1171 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_marksperson.msh]:all_inf_marksperson has 1534 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_markspersonsnow.msh]:all_inf_markspersonsnow has 1286 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_pilot.msh]:all_inf_pilot has 1330 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_inf_wookie.msh]:all_inf_wookie has 1925 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: out of space in splitting catalog!
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: resorting to brute force, this may take a while...
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: out of space in splitting catalog!
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: resorting to brute force, this may take a while...
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: out of space in splitting catalog!
+WARNING[PC_modelmunge msh\all_walk_tauntaun.msh]:SplitSkinnedSegments: WARNING: resorting to brute force, this may take a while...
+WARNING[PC_modelmunge msh\all_weap_inf_ce14c.msh]:all_weap_inf_ce14c has 1853 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_weap_inf_de10.msh]:all_weap_inf_de10 has 1008 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_weap_inf_dx13.msh]:all_weap_inf_dx13 has 1322 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_weap_inf_ee3.msh]:all_weap_inf_ee3 has 1991 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_weap_inf_fettrifle.msh]:all_weap_inf_fettrifle has 1220 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+WARNING[PC_modelmunge msh\all_weap_inf_relbyv10.msh]:all_weap_inf_relbyv10 has 1670 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+   0 Errors   24 Warnings
+

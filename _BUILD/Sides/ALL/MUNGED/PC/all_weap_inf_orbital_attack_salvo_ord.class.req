@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_laser_yellow"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_orbital_attack_salvo_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+}

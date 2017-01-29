@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"hg2_inf_default_engineer"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_engineer"
+		"all_inf_engineer_low1"
+	}
+}

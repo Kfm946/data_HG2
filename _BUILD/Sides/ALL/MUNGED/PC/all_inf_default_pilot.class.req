@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_inf_default"
+		"all_weap_inf_commando_pistol"
+		"all_weap_inf_fusioncutter"
+		"all_weap_inf_timebomb"
+		"all_weap_award_pistol"
+	}
+}

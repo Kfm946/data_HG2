@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_laser_blue"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_watersplash_md"
+		"com_sfx_weap_beam_exp"
+	}
+}

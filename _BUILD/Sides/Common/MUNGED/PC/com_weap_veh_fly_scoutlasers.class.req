@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"reticule_rifle"
+		"hud_all_lascannon_icon"
+	}
+}

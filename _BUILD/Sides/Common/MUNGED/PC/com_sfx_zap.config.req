@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"com_sfx_f_zap"
+		"com_sfx_f_star"
+		"com_sfx_f_swirl"
+		"com_sfx_f_circle"
+	}
+}

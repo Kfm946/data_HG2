@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_rifle_icon"
+		"hud_weap_semiauto"
+	}
+	REQN
+	{
+		"animset"
+		"human_force"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_forcepull_ord"
+	}
+}

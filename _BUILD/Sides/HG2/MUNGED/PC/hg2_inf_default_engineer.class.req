@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"hg2_inf_default"
+		"hg2_weap_inf_shotgun"
+		"hg2_weap_inf_revolver"
+		"all_weap_inf_detpack"
+	}
+}

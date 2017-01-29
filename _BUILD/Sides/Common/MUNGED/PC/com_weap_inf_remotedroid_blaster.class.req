@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_pistol_icon"
+		"hud_weap_semiauto"
+		"reticule_pistol"
+	}
+	REQN
+	{
+		"animset"
+		"human_pistol"
+	}
+}
