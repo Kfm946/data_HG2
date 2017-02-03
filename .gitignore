@@ -8,6 +8,7 @@ SWBF2-Lua-API-master/
 .project
 Battlefront2API.doclua
 zeroeditor.exe
+addme/*.log
 _BUILD/Common/MUNGED/
 _BUILD/Common/*.log
 _BUILD/Shell/MUNGED/
