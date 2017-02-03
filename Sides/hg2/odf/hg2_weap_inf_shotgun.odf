@@ -1,0 +1,57 @@
+[WeaponClass]
+ClassParent         = "com_weap_inf_shotgun"
+GeometryName            = "all_weap_inf_seeker.msh"
+
+[Properties]
+GeometryName            = "all_weap_inf_seeker"
+HighResGeometry         = "all_1st_weap_inf_seeker"
+OrdnanceName            = "hg2_weap_inf_shotgun_ord"
+
+//**************************************************
+//*************** HG2 Changes **********************
+//**************************************************
+
+
+SecondaryOrdnanceName 	= "hg2_weap_inf_shotgun_tracer"
+SecondaryOrdnancePeriod = 1
+
+KickSpread = ".5"
+SpreadRecover = "4"
+
+RecoilLengthHeavy       = "1.5"
+RecoilStrengthHeavy     = "1"
+RecoilDecayHeavy        = "4"
+
+KickStrength = "1.5"
+KickBuildup = ".1"
+
+RoundsPerClip       = "60"
+
+LockOnRange         = "0.0"
+OptimalRange        = "0"
+MaxRange            = "0"
+
+PitchSpread         = "2.5"
+YawSpread           = "3.5"
+
+ShotsPerSalvo       = "12"
+
+
+// *************************************************
+//******************* SOUND ************************
+//**************************************************
+
+FireSound           = "all_weap_inf_shotgun_fire"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+
+ReloadSound         = "com_weap_inf_reload_med"
+ChangeModeSound     = "com_weap_inf_equip_med"
+WeaponChangeSound   = "com_weap_inf_equip_med"
+
+
+JumpSound           = "com_weap_inf_rifle_mvt_jump"
+LandSound           = "com_weap_inf_rifle_mvt_land"
+RollSound           = "com_weap_inf_rifle_mvt_roll"
+//ProneSound          = "com_weap_inf_rifle_mvt_lie"
+SquatSound          = "com_weap_inf_rifle_mvt_squat"
+//StandSound          = "com_weap_inf_rifle_mvt_getup"

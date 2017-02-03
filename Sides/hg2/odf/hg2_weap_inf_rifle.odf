@@ -1,0 +1,63 @@
+[WeaponClass]
+ClassParent         = "com_weap_inf_rifle"
+GeometryName        = "all_weap_inf_rifle.msh"
+
+[Properties]
+AnimationBank       = "rifle"
+GeometryName        = "all_weap_inf_rifle"
+HighResGeometry     = "all_1st_weap_inf_rifle"
+OrdnanceName            = "hg2_weap_inf_rifle_ord"
+
+
+
+//**************************************************
+//*************** HG2 Changes **********************
+//**************************************************
+
+SecondaryOrdnanceName 	= "hg2_weap_inf_rifle_tracer"
+SecondaryOrdnancePeriod = 1
+
+YawSpread       = "0.35"
+PitchSpread     = "0.35"
+
+SpreadPerShot       = "1.0"
+SpreadRecoverRate   = "6.0"
+SpreadThreshold     = "2.0"
+SpreadLimit         = "3.5"
+
+StandStillSpread    = "0.5"
+StandMoveSpread     = "1.0"
+StandAimSpread		= "0.2"
+CrouchStillSpread   = "0.3"
+CrouchMoveSpread    = "0.5"
+CrouchAimSpread		= "0.0"
+
+RoundsPerClip       = "30"
+ReloadTime          = "2.5"
+ShotDelay           = "0.13333"
+
+RecoilLengthLight   = "0.1"
+RecoilLengthHeavy   = "0.1"
+RecoilStrengthLight = "2.0"
+RecoilStrengthHeavy = "0.2"
+RecoilDecayLight    = "0.0"
+RecoilDecayHeavy    = "1.0"
+
+KickStrength = "1"
+KickBuildup = ".1"
+
+//******************************************************
+//***************   SOUND       ****************
+//******************************************************
+
+FireSound               = "all_weap_inf_rifle_fire"
+ReloadSound             = "com_weap_inf_reload_med"
+ChangeModeSound         = "com_weap_inf_equip_med"
+FireEmptySound          = "com_weap_inf_ammo_empty"
+WeaponChangeSound       = "com_weap_inf_equip_med"
+JumpSound               = "com_weap_inf_rifle_mvt_jump"
+LandSound               = "com_weap_inf_rifle_mvt_land"
+RollSound               = "com_weap_inf_rifle_mvt_roll"
+ProneSound              = "com_weap_inf_rifle_mvt_squat"
+SquatSound              = "com_weap_inf_rifle_mvt_squat"
+//StandSound              = "com_weap_inf_rifle_mvt_getup"

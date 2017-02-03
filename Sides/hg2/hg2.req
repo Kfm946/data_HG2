@@ -1,0 +1,26 @@
+ucft
+{
+    REQN
+    {
+        "lvl"
+        "hg2_inf_engineer_jungle"
+        "hg2_inf_officer_jungle"
+        "hg2_inf_rifleman_jungle"
+        "hg2_inf_rocketeer_jungle"
+        "hg2_inf_sniper_jungle"
+        "hg2_inf_hunter"
+    }
+	
+	REQN
+    {
+		"model"
+		"com_inv_mesh"
+		"all_weap_inf_de10"
+    }
+    
+    REQN
+    {
+		"config"
+		"extraweapons"
+    }
+}

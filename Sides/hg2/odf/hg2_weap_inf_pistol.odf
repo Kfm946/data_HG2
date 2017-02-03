@@ -1,0 +1,113 @@
+[WeaponClass]
+ClassLabel      = "cannon"
+GeometryName        = "all_weap_inf_pistol.msh"
+
+[Properties]
+
+AnimationBank   = "pistol"
+GeometryName        = "all_weap_inf_pistol"
+HighResGeometry         = "all_1st_weap_inf_pistol"
+OrdnanceName        = "hg2_weap_inf_pistol_ord"
+//***********************************************
+//************* TARGET & RANGE VALUES  **********
+//***********************************************
+
+TargetEnemy         = "1"
+TargetNeutral       = "0"
+TargetFriendly      = "0"
+
+TargetPerson        = "1"
+TargetAnimal        = "1"
+TargetDroid         = "1"
+TargetVehicle       = "0"
+TargetBuilding      = "0"
+
+MinRange            = "0"
+LockTime            = "0.4"
+LockOnAngle         = "1.0"
+
+ZoomMin             = "2.5"
+ZoomMax             = "2.5"
+ZoomRate            = "0.0"
+
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+
+ReloadTime          = "2.0"
+TriggerSingle       = "1"
+MaxPressedTime      = "0.0"
+
+DisplayRefire 		= "0"
+
+SalvoCount          = "1"
+SalvoDelay          = "0.0"
+InitialSalvoDelay   = "0.0"
+SalvoTime           = "0.0"
+
+FirePointName       = "hp_fire"
+
+//***********************************************
+//***********  HUD & CONTROLLER VALUES  *********
+//***********************************************
+
+MuzzleFlash         = "small_muzzle_flash"
+FlashColor          = "255 80 80 255"
+FlashLength         = 0.025
+FlashLightColor     = "255 192 192 175"
+FlashLightRadius    = "2.0"
+FlashLightDuration  = "0.25"
+Discharge           = "small_smoke_effect"
+
+
+//**************************************************
+//*************** HG2 Changes **********************
+//**************************************************
+
+SecondaryOrdnanceName 	= "hg2_weap_inf_pistol_tracer"
+SecondaryOrdnancePeriod = 1
+
+LockOnRange         = "0.0"
+OptimalRange        = "0"
+MaxRange            = "0"
+
+YawSpread       = "0.1"
+PitchSpread     = "0.1"
+
+SpreadPerShot       = "1.2"
+SpreadRecoverRate   = "5.5"
+SpreadThreshold     = "1.5"
+SpreadLimit         = "2.5"
+
+StandStillSpread    = "0.5"
+StandMoveSpread     = "1.0"
+StandAimSpread		= "0.2"
+CrouchStillSpread   = "0.1"
+CrouchMoveSpread    = "0.2"
+CrouchAimSpread		= "0.0"
+
+RoundsPerClip       = "15"
+ShotDelay           = "0.15"
+
+KickStrength = ".35"
+KickBuildup = "0.0"
+
+//******************************************************
+//***************   SOUND       ****************
+//******************************************************
+
+FireSound           = "all_weap_inf_pistol_fire"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+ReloadSound         = "com_weap_inf_reload_sm"
+//OverheatSound       = "com_weap_energy_depleted"
+//OverheatSoundPitch  = "0.5"
+//OverheatStopSound   = "com_weap_energy_refilled"
+ChangeModeSound     = "com_weap_inf_equip_sm"
+WeaponChangeSound   = "com_weap_inf_equip_sm"
+JumpSound           = "com_weap_inf_pistol_mvt_jump"
+LandSound           = "com_weap_inf_pistol_mvt_land"
+RollSound           = "com_weap_inf_pistol_mvt_roll"
+//ProneSound          = "com_weap_inf_pistol_mvt_lie"
+SquatSound          = "com_weap_inf_pistol_mvt_squat"
+//StandSound          = "com_weap_inf_pistol_mvt_getup"
