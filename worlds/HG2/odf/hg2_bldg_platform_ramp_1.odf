@@ -1,0 +1,11 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"hg2_bldg_platform_ramp_1.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_platform_ramp_1"
+
+FoleyFXGroup    = "metal_foley"
