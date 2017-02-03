@@ -74,9 +74,12 @@ YOU MAY NOT HOST OR DISTRIBUTE THIS MAP WITHOUT MY PERMISSION.
 
 
 
+======================================================================
 
+Deviss - Models: DC17m, 
+Serejas - Models: DE-10, SE-14C, DX13, EE-3, Relby V-10
 
-
+Mike Z/Majin Revan/FragMe! - Floating HUD icon fix
 
 
 ======================================================================

@@ -846,14 +846,14 @@ function ScriptInit()
     
     
     ReadDataFile("sound\\tat.lvl;tat2gcw")
-    ReadDataFile("SIDE\\all.lvl",
-                    "all_inf_rifleman",
-                    "all_inf_rocketeer",
-                    "all_inf_sniper",
-                    "all_inf_engineer",
-                    "all_inf_officer",
-                    "all_inf_wookiee",
-                    "all_hero_hansolo_tat")
+    ReadDataFile("dc:SIDE\\hg2.lvl",
+                    "hg2_inf_rifleman_jungle",
+                    "hg2_inf_rocketeer_jungle",
+                    "hg2_inf_sniper_jungle",
+                    "hg2_inf_engineer_jungle",
+                    "hg2_inf_officer_jungle",
+                    "hg2_inf_hunter"
+                    )
                     
     ReadDataFile("SIDE\\imp.lvl",
                     "imp_inf_rifleman",
@@ -870,12 +870,12 @@ function ScriptInit()
 			team = ALL,
 			units = 20,
 			reinforcements = 150,
-			soldier	= { "all_inf_rifleman",9, 25},
-			assault	= { "all_inf_rocketeer",1,4},
-			engineer = { "all_inf_engineer",1,4},
-			sniper	= { "all_inf_sniper",1,4},
-			officer	= { "all_inf_officer",1,4},
-			special	= { "all_inf_wookiee",1,4},
+			soldier	= { "hg2_inf_rifleman_jungle",9, 25},
+			--assault	= { "hg2_inf_rocketeer_jungle",1,4},
+			engineer = { "hg2_inf_engineer_jungle",1,4},
+			--sniper	= { "hg2_inf_sniper_jungle",1,4},
+			--officer	= { "hg2_inf_officer_jungle",1,4},
+			--special	= { "hg2_inf_hunter",1,4},
 
 		},
 		imp = {
@@ -890,16 +890,9 @@ function ScriptInit()
 			special	= { "imp_inf_dark_trooper",1,4},
 		},
 	}
-    
-    SetHeroClass(ALL, "all_hero_hansolo_tat")
-    SetHeroClass(IMP, "imp_hero_bobafett")
 
     --  Level Stats
     ClearWalkers()
-    AddWalkerType(0, 0) -- special -> droidekas
-    AddWalkerType(1, 0) -- 1x2 (1 pair of legs)
-    AddWalkerType(2, 0) -- 2x2 (2 pairs of legs)
-    AddWalkerType(3, 0) -- 3x2 (3 pairs of legs)
     
     local weaponCnt = 1024
     SetMemoryPoolSize("Aimer", 75)
@@ -999,7 +992,7 @@ function addPointsToChar(character, dpoints)
     { point_gain =  0  },     --//  PS_GLB_KILL_AI_PLAYER = 0,
     { point_gain =  0  },     --//  PS_GLB_KILL_HUMAN_PLAYER,
     { point_gain =  0  },     --//  PS_GLB_KILL_HUMAN_PLAYER_AI_OFF,
-    { point_gain =  -dpoints  },      --//  PS_GLB_KILL_SUICIDE,    
+    { point_gain =  dpoints  },      --//  PS_GLB_KILL_SUICIDE,    
     { point_gain =   0  },      --//  PS_GLB_KILL_TEAMMATE,
     { point_gain =  0  },     --//  PS_GLB_VEHICLE_KILL_INFANTRY_VS_VEHICLE,
     { point_gain =  0  },     --//  PS_GLB_VEHICLE_KILL_LIGHT_VS_HEAVY,

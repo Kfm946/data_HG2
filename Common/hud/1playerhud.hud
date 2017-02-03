@@ -176,6 +176,13 @@ Group("player1weaponinformation")
                 ZOrder(5)
                 EventEnable("player1.weapon1.mesh")
                 EventDisable("player1.weapon1.disable")
+				
+				
+				
+				
+				
+				
+				
                 MeshInfo("hud_vehicle_lasers")
                 {
                     Position(-0.185992, 0.354928, -0.000509, "Viewport")
@@ -513,7 +520,12 @@ Group("player1weaponinformation")
                     Rotation(0.056783, 359.996582, 359.999695)
                     Scale(0.610000, 0.610000, 0.610000)
                 }
-
+				
+				
+				
+				
+				
+				
                 MeshInfo("wok_weap_inf_thermaldetonator")
                 {
                     Position(-0.274201, 0.254023, 0.006280, "Viewport")

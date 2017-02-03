@@ -136,6 +136,13 @@ Group("player1weaponinformation")
                 ZOrder(5)
                 EventEnable("player1.weapon1.mesh")
                 EventDisable("player1.weapon1.disable")
+				
+				
+				
+				
+				
+				
+				
                 MeshInfo("hud_vehicle_lasers")
                 {
                     Position(-0.185992, 0.354928, -0.000509, "Viewport")
@@ -462,8 +469,8 @@ Group("player1weaponinformation")
                 Viewport(1)
                 ZOrder(5)
                 EventEnable("player1.weapon2.mesh")
-                EventDisable("player1.weapon2.disable")
-                
+                EventDisable("player1.weapon2.disable")				
+				
                 MeshInfo("hud_thermaldetonator")
                 {
                     Position(-0.284209, 0.250243, 0.006280, "Viewport")

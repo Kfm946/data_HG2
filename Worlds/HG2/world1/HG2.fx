@@ -72,7 +72,7 @@ Effect("Precipitation")
    Texture("fx_pollen");
    ParticleSize(0.01);
    Color(200, 210, 213);
-   Range(30.0);
+   Range(25.0);
    Velocity(0.0);
    VelocityRange(0.3);
    PC()
@@ -86,9 +86,13 @@ Effect("Precipitation")
    RotationRange(2.0);
 }
 
-Effect("hdr")
+Effect("HDR")
 {
 	Enable(1)
+	DownSizeFactor(0.25)
+	NumBloomPasses(3)
+	MaxTotalWeight(1.0)
+	GlowThreshold(0.5)
+
+	GlowFactor(1.0)
 }
-
-

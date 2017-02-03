@@ -4,20 +4,20 @@
 ClassLabel              = "soldier"
 
 [Properties]
-MapTexture              = "troop_icon"
+MapTexture              = "rechargedroid_icon"
 MapScale                = 1.4
-MapViewMin		= 50
-MapViewMax		= 50
+MapViewMin		= 0
+MapViewMax		= 0
 MapSpeedMin		= 0
 MapSpeedMax		= 100
 
 HealthType             	= "person"
-MaxHealth           	= 400.0
+MaxHealth           	= 800.0
 
 // Movement defaults
 // These are values for an average class - some soldiers will override these
-MaxSpeed                = 7.0       // base forward speed
-MaxStrafeSpeed          = 5.25       // base right/left speed
+MaxSpeed                = 7.5       // base forward speed
+MaxStrafeSpeed          = 5.5       // base right/left speed
 MaxTurnSpeed            = 5.0       // base turn speed
 JumpHeight              = 1.78      // base jump height in meters
 // Speed multipliers for various actions
@@ -44,13 +44,13 @@ ControlSpeed            = "roll   0.02 0.02 0.35"
 ControlSpeed            = "tumble 0.00 0.00 0.10"
 
 // Energy bar defaults
-EnergyBar               = 120.0     // Max energy
+EnergyBar               = 150.0     // Max energy
 EnergyRestore           = 10.0      // energy regained per second if moving
 EnergyRestoreIdle       = 15.0      // energy regained per second if not
 EnergyDrainSprint       = 20.0      // energy spent per second of sprinting
 EnergyMinSprint         = 20.0      // min energy to start sprinting
 EnergyCostJump          = 0.0      // energy cost to jump
-EnergyCostRoll          = 25.0      // energy cost to roll
+EnergyCostRoll          = 30.0      // energy cost to roll
 
 AimValue                = "1.0"
 AimFactorPostureSpecial = 50

@@ -9,7 +9,6 @@
 HG2PlayerManagement = {
   unit_locations = {},              --used by camper killer to track players
   players_alive = {},              --used for tracking various data related to each player alive
-  players_eliminated = {},         --used to store ranking for dead players
   
   num_alive = 0,                   --number of players alive.
   num_registered = 0,              --number of players that have registered to play
@@ -76,8 +75,7 @@ function HG2PlayerManagement:RemovePlayer(character, started)
   self.players_alive[character] = nil
   self.num_alive = self.num_alive - 1
   if started then
-    self.players_eliminated[character] = {char = character, rank = -(self.num_alive + 1)}
-    return self.players_eliminated[character].rank
+    return self.num_registered - self.num_alive + 1
   else return 0 end
   print("\tNew player count:", self.num_alive)
 end
