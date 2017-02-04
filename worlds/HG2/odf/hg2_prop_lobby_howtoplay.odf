@@ -1,0 +1,9 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"hg2_prop_lobby_howtoplay.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_prop_lobby_howtoplay"
