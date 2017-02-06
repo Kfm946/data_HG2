@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.770, 0.097, -0.626, 0.079);
-	Position(534.951, 5.943, -55.816);
+	Rotation(0.510, 0.055, -0.854, 0.092);
+	Position(30.458, 22.588, -9.387);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(-15.680, 62.240, 0.000,  0.707, 0.707, 0.000, 0.000);
+	Bookmark(2.464, 0.101, 2.481,  0.537, 0.537, -0.460, 0.460);
 }
 LightName("HG2.LGT");
 TerrainName("HG2.ter");
@@ -653,10 +653,19 @@ Object("tat2_bldg_dockingbay_04", "tat2_bldg_dockingbay_04", 304287147)
 	NetworkId(-1);
 }
 
+Object("hg2_bldg_apt1", "hg2_bldg_apt1", 347734957)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(1.000, -1.048, 47.000);
+	SeqNo(347734957);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("exp_shield_blue2", "hg2_prop_hanger_shield_blue", 394295843)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(459.000, -24.000, -45.000);
+	ChildPosition(459.177, -24.000, -45.000);
 	SeqNo(394295843);
 	Team(0);
 	NetworkId(-1);
@@ -860,6 +869,15 @@ Object("tat1_bldg_rocksharpbig2", "tat1_bldg_rocksharpbig", -1915718845)
 	NetworkId(-1);
 }
 
+Object("hg2_bldg_apt2", "hg2_bldg_apt1", -1910879391)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.000, -0.369, -59.000);
+	SeqNo(-1910879391);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("tat2_bldg_dockingbay_03", "tat2_bldg_dockingbay_03", -1790549208)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
@@ -1013,6 +1031,15 @@ Object("tat1_bldg_rock_rubble_pillar1", "tat1_bldg_rock_rubble_pillar", -7242295
 	NetworkId(-1);
 }
 
+Object("hg2_prop_SD_switch", "hg2_prop_SD_switch", -495893533)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(477.000, -20.000, -58.469);
+	SeqNo(-495893533);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("tat1_prop_rock3", "tat1_prop_rock2", -477697613)
 {
 	ChildRotation(0.930, 0.000, -0.367, 0.000);
@@ -1061,7 +1088,7 @@ Object("Kisten5_cluster", "Kisten5_cluster", -365158843)
 Object("reg_shield_blue1", "hg2_prop_hanger_shield_blue_nc", -355759260)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(488.000, -24.000, -45.000);
+	ChildPosition(487.662, -24.000, -45.000);
 	SeqNo(-355759260);
 	Team(0);
 	NetworkId(-1);
@@ -1070,7 +1097,7 @@ Object("reg_shield_blue1", "hg2_prop_hanger_shield_blue_nc", -355759260)
 Object("exp_shield_blue1", "hg2_prop_hanger_shield_blue_nc", -323753054)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(460.000, -24.000, -45.000);
+	ChildPosition(460.345, -24.000, -45.000);
 	SeqNo(-323753054);
 	Team(0);
 	NetworkId(-1);
@@ -1112,6 +1139,15 @@ Object("hg2_bldg_platform_ramp_2", "hg2_bldg_platform_ramp_1", -195942922)
 	NetworkId(-1);
 }
 
+Object("hg2_bldg_arch", "hg2_bldg_arch", -108072347)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-3.000, -2.364, -39.000);
+	SeqNo(-108072347);
+	Team(0);
+	NetworkId(-1);
+}
+
 Object("tat1_bldg_rock_boulder4", "tat1_bldg_rock_boulder", -99194006)
 {
 	ChildRotation(-0.383, 0.000, -0.924, 0.000);
@@ -1124,7 +1160,7 @@ Object("tat1_bldg_rock_boulder4", "tat1_bldg_rock_boulder", -99194006)
 Object("reg_shield_blue2", "hg2_prop_hanger_shield_blue", -41369578)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
-	ChildPosition(489.000, -24.000, -45.000);
+	ChildPosition(488.842, -24.000, -45.000);
 	SeqNo(-41369578);
 	Team(0);
 	NetworkId(-1);

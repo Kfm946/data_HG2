@@ -1,13 +1,13 @@
 [GameObjectClass]       
 
 ClassLabel		= "destructablebuilding"
-GeometryName    	= "dea1_prop_panel.msh"
+GeometryName    	= "hg2_prop_panel_on.msh"
 
 
 [Properties]        
 
-GeometryName    =   "dea1_prop_panel"
-DestroyedGeometryName   = "dea1_prop_panel"
+GeometryName    =   "hg2_prop_panel_on"
+DestroyedGeometryName   = "hg2_prop_panel_off"
 ExplosionName       = "com_inf_rechargedroid_exp"
 MaxHealth       = 4
 

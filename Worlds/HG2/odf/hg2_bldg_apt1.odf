@@ -1,0 +1,9 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"hg2_bldg_apt1.msh"
+
+
+[Properties]		
+
+GeometryName	=	"hg2_bldg_apt1"

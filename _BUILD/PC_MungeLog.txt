@@ -1,0 +1,3 @@
+WARNING[PC_modelmunge msh\hg2_bldg_apt1.msh]:hg2_bldg_apt1 has 3084 vertices and NO COLLISION GEOMETRY (WILL BE SLOW)!
+   0 Errors    1 Warnings
+

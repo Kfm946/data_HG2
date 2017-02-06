@@ -185,6 +185,19 @@ function ScriptPostLoad()
   
   BlockPlanningGraphArcs("Connection_reg1");
   BlockPlanningGraphArcs("Connection_reg2");
+  
+  BlockPlanningGraphArcs("gp1");
+  BlockPlanningGraphArcs("gp2");
+  BlockPlanningGraphArcs("gp3");
+  BlockPlanningGraphArcs("gp4");
+  BlockPlanningGraphArcs("games1");
+  BlockPlanningGraphArcs("games2");
+  BlockPlanningGraphArcs("games3");
+  BlockPlanningGraphArcs("games4");
+  BlockPlanningGraphArcs("games5");
+  BlockPlanningGraphArcs("games6");
+  BlockPlanningGraphArcs("games7");
+  BlockPlanningGraphArcs("games8");
 
   --set up shields
   KillObject("reg_shield_blue1")
@@ -517,13 +530,6 @@ function ScriptPostLoad()
         
                 
         KillObject("reg_switch")
-        --TODO: Set up these objects.
---        ActivateObject("com_inv_col_16_con1")
---        ActivateObject("com_inv_col_64_con2")
---        ActivateObject("com_inv_col_16_con3")
---        ActivateObject("com_inv_col_16_con4")
---        ActivateObject("com_inv_col_16_con")
-
         
         SetTimerValue(VisualTimer, 10)
         StartTimer(VisualTimer)
@@ -674,6 +680,30 @@ function ScriptPostLoad()
       
       KillObject("center_shield")
       
+      DisableBarriers("center1");
+      DisableBarriers("center2");
+      DisableBarriers("center3");
+      DisableBarriers("center4");
+      DisableBarriers("center5");
+      DisableBarriers("center6");
+      DisableBarriers("center7");
+      DisableBarriers("center8");
+      
+      BlockPlanningGraphArcs("center1");
+      BlockPlanningGraphArcs("center2");
+      BlockPlanningGraphArcs("center3");
+      BlockPlanningGraphArcs("center4");
+      BlockPlanningGraphArcs("center5");
+      BlockPlanningGraphArcs("center6");
+      
+  
+      UnblockPlanningGraphArcs("gp1");
+      UnblockPlanningGraphArcs("gp2");
+      UnblockPlanningGraphArcs("gp3");
+      UnblockPlanningGraphArcs("gp4");
+
+      
+      
       --clean up previous timer
       ReleaseTimerElapse(RulesElapse2)
       RulesElapse2 = nil
@@ -731,6 +761,27 @@ function ScriptPostLoad()
       print("\nThe Games have begun!\n")
       ShowMessageText("level.HG2.games.begin")
       
+ 
+      UnblockPlanningGraphArcs("games1");
+      UnblockPlanningGraphArcs("games2");
+      UnblockPlanningGraphArcs("games3");
+      UnblockPlanningGraphArcs("games4");
+      UnblockPlanningGraphArcs("games5");
+      UnblockPlanningGraphArcs("games6");
+      UnblockPlanningGraphArcs("games7");
+      UnblockPlanningGraphArcs("games8");
+      
+      UnblockPlanningGraphArcs("center1");
+      UnblockPlanningGraphArcs("center2");
+      UnblockPlanningGraphArcs("center3");
+      UnblockPlanningGraphArcs("center4");
+      UnblockPlanningGraphArcs("center5");
+      UnblockPlanningGraphArcs("center6");
+  
+      BlockPlanningGraphArcs("gp1");
+      BlockPlanningGraphArcs("gp2");
+      BlockPlanningGraphArcs("gp3");
+      BlockPlanningGraphArcs("gp4");
       
       ClearAIGoals(1)
       ClearAIGoals(2)
