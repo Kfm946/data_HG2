@@ -93,9 +93,6 @@ function ScriptPostLoad()
     teleCenter = GetPathPoint("center_spawn", 0)
     teleLobby = GetPathPoint("lobby_teleport", 0)
     
-    --get nodes for superpowerup spawning
-    local super_nodes = superpowers("super_spawn")
-    
     team_mode = false
     SD_mode = false
     
@@ -120,12 +117,15 @@ function ScriptPostLoad()
     RealFreeCamFn = ScriptCB_Freecamera
     
     --save real Fake Console function
-    RealFakeConFn = ff_DoCommand
+    RealFakeConFn = ff_AddCommand
+    FakeConsoleAllowed = function()
+      return (game_state == 0)
+    end
     
     --overwrite fake console to prevent cheating
-    ff_DoCommand = function(...)
-      print("Used fake console.")
-      return RealFakeConFn(unpack(arg))
+    ff_AddCommand = function(show, description, command, now)
+      now = FakeConsoleAllowed
+      return RealFakeConFn(show, description, command, now)
     end
   
   --set new player points to zero; points will be set manually later
@@ -229,13 +229,7 @@ function ScriptPostLoad()
        
       if GetEntityClass(flag) == FindEntityClass("com_item_powerup_armor") then
         local curShields = GetObjectShield(charPtr)
-        
-        if curShields >= max_shields/2 then
-          SetProperty(charPtr, "CurShield", max_shields)
-        else
-          SetProperty(charPtr, "CurShield", curShields + max_shields/2)
-        end
-      
+        SetProperty(charPtr, "CurShield", math.min(max_shields, curShields + max_shields/2))
         KillObject(flag)
       end
     end
@@ -300,8 +294,7 @@ function ScriptPostLoad()
       print("\nOnCharacterSpawn() with args:", character) 
       local charUnit = GetCharacterUnit(character)
       print("\tTaking away their sheilds")
-      --TODO: Figure out what's wrong with this
-      --SetProperty(charPtr, "CurShield", 0)
+      SetProperty(charUnit, "CurShield", 0)
       PlayerManager:AddPlayer(character, charUnit, GetCharacterTeam(character))
       
       print("\tAdded player "..character.." to players_alive.\n")
@@ -673,7 +666,8 @@ function ScriptPostLoad()
       print("\nOnTimerElapse(RulesElapse1)") 
       print("The grace period has begun.\n")
       StartTimer(GraceTimer)
-      PowerupSpawner(super_nodes)
+      
+      PowerupSpawner()
       ShowMessageText("level.HG2.grace.begin")
       SetTimerValue(VisualTimer, 30)
       StartTimer(VisualTimer)
@@ -921,12 +915,12 @@ function ScriptInit()
 			team = ALL,
 			units = 20,
 			reinforcements = 150,
-			soldier	= { "hg2_inf_rifleman_jungle",9, 25},
-			--assault	= { "hg2_inf_rocketeer_jungle",1,4},
-			engineer = { "hg2_inf_engineer_jungle",1,4},
-			--sniper	= { "hg2_inf_sniper_jungle",1,4},
-			--officer	= { "hg2_inf_officer_jungle",1,4},
-			--special	= { "hg2_inf_hunter",1,4},
+			soldier	= { "hg2_inf_rifleman_jungle",2, 10},
+			--assault	= { "hg2_inf_rocketeer_jungle",2,10},
+			engineer = { "hg2_inf_engineer_jungle",2,10},
+			sniper	= { "hg2_inf_sniper_jungle",2,10},
+			--officer	= { "hg2_inf_officer_jungle",2,10},
+			--special	= { "hg2_inf_hunter",2,10},
 
 		},
 		imp = {
@@ -1091,7 +1085,7 @@ end
 --------------------------------------------------------------
 -- Manages spawning of normal/fake powerups
 -- 
-function PowerupSpawner(super_nodes)
+function PowerupSpawner()
   print("\nPowerupSpawner()")
   local powerupTable = {}
   
@@ -1116,7 +1110,7 @@ function PowerupSpawner(super_nodes)
   local item = {timer = 0, spawn = NIL, type = "super"}
   --TODO: Change these values after powerups are made
   item.timer = math.ceil(GetRandomNumber()*1/pup_int)*pup_int+10
-  item.spawn = super_nodes
+  item.spawn = superpowers("super_spawn")
   powerupTable[num_powerups+num_armor] = item
   
   PowerupSpawnTimer = CreateTimer("PowerupSpawnTimer")

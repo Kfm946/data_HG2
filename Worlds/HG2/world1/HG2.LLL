@@ -118,5 +118,6 @@ Group("Last Loaded")
 	Layer("conquest");
 	Layer("conquest");
 	Layer("conquest");
+	Layer("conquest");
 }
 

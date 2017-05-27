@@ -1,9 +1,18 @@
 [WeaponClass]
 ClassLabel          = "cannon"
+GeometryName        = "all_weap_inf_fettrifle.msh"
 
 [Properties]
-
 AnimationBank       = "rifle"
+
+GeometryName        = "all_weap_inf_fettrifle"
+HighResGeometry     = "all_weap_inf_fettrifle"
+
+OrdnanceName        = "hg2_weap_inf_sniper_rifle_ord"
+SecondaryOrdnanceName 	= "hg2_weap_inf_sniper_rifle_tracer"
+SecondaryOrdnancePeriod = 1
+FirePointName       = "hp_fire"
+
 
 //***********************************************
 //************* TARGET & RANGE VALUES  **********
@@ -38,28 +47,37 @@ ZoomRate            = "0.0"
 
 YawSpread           = "0.0"
 PitchSpread         = "0.0"
-    
-KickStrength        = "0.0" // "2.0"
 
 SpreadPerShot       = "1.1"
 SpreadRecoverRate   = "4.8"
 SpreadThreshold     = "1.6"
 SpreadLimit         = "6.0"
 
-StandStillSpread    = "0.0"
-StandMoveSpread     = "0.0"
-CrouchStillSpread   = "0.0"
-CrouchMoveSpread    = "0.0"
-ProneStillSpread    = "0.0"
-ProneMoveSpread     = "0.0"
+HeatRecoverRate         = "1.2"
+HeatThreshold           = "0.01"
+HeatPerShot              = "1.2"
+
+StandStillSpread    = "0.025"
+StandMoveSpread     = "0.5"
+StandAimSpread		= "0.0"
+CrouchStillSpread   = "0.0125"
+CrouchMoveSpread    = "0.25"
+CrouchAimSpread		= "0.0"
+
+KickStrength = "10"
+KickBuildup = "1.0"
+
+RecoilLengthHeavy       = "1.5"
+RecoilStrengthHeavy     = "1"
+RecoilDecayHeavy        = "4"
 
 //***********************************************
 //*********** WEAPON PERFORMANCE VALUES *********
 //***********************************************
 
-RoundsPerClip       = "8"    // 5
-ReloadTime          = "2.0"
-ShotDelay           = "0.8"  //1.0
+RoundsPerClip       = "10"    // 5
+ReloadTime          = "3.5"
+ShotDelay           = "1.2"  //1.0
 TriggerSingle       = "1"
 MaxPressedTime      = "0.0"
 
@@ -76,10 +94,25 @@ ScopeTexture        = "weapon_scope3"
 
 MuzzleFlash         = "small_muzzle_flash"
 FlashColor          = "255 80 80 255"
-FlashLength         = 0.025
+FlashLength         = 0.04
 FlashLightColor     = "255 192 192 175"
 FlashLightRadius    = "2.0"
 FlashLightDuration  = "0.25"
 Discharge           = "small_smoke_effect"
 
+//************************************************
+//*******************   SOUND    *****************
+//************************************************
+
+FireSound           = "all_weap_inf_sniper_rifle_fire"
+ReloadSound         = "com_weap_inf_reload_med"
+ChangeModeSound     = "com_weap_inf_equip_med"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+WeaponChangeSound   = "com_weap_inf_equip_med"
+JumpSound           = "com_weap_inf_rifle_mvt_jump"
+LandSound           = "com_weap_inf_rifle_mvt_land"
+RollSound           = "com_weap_inf_rifle_mvt_roll"
+//ProneSound          = "com_weap_inf_rifle_mvt_lie"
+SquatSound          = "com_weap_inf_rifle_mvt_squat"
+//StandSound          = "com_weap_inf_rifle_mvt_getup"
 

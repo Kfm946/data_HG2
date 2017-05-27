@@ -10,15 +10,13 @@ MaxHealth       = 650.0
 MaxSpeed        = 9.0
 MaxStrafeSpeed  = 7.0
 
-CollisionHeadOffset = "0.0 0.15 0.0"
-
 WEAPONSECTION = 1
-WeaponName     = "all_weap_inf_sniper_rifle"
+WeaponName     = "hg2_weap_inf_sniper_rifle"
 WeaponAmmo     = 7
 
 WEAPONSECTION = 2
-WeaponName     = "all_weap_inf_pistol"
-WeaponAmmo     = 0
+WeaponName     = "hg2_weap_inf_ce14c"
+WeaponAmmo     = 6
 
 WEAPONSECTION = 3
 WeaponName     = "all_weap_inf_thermaldetonator"

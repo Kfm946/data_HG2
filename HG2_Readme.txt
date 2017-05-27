@@ -51,7 +51,8 @@ YOU MAY NOT HOST OR DISTRIBUTE THIS MAP WITHOUT MY PERMISSION.
 
 
 
- * GAME MODES: GCW Conquest - Free for All Hunger Games (No teams, all players fight each other)
+ * GAME MODES:  GCW Conquest - Free for All Hunger Games with vanilla units (No teams, all players fight each other)
+		CW Conquest  - Free for All Hunger Games with special units (Custom sides with new classes/weapons)
 
 
 

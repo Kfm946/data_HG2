@@ -5,6 +5,11 @@ ClassParent             = "com_inf_default"
 
 [Properties]
 
+MapTexture          = "rechargedroid2_icon"
+MaxHealth           	= 800.0
+MaxShield				= 1000.0
+AddShield          		= 0
+AddShieldOff        	= 0
 
 HurtSound               = "all_inf_com_chatter_wound"
 DeathSound              = "all_inf_com_chatter_death"
