@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.510, 0.055, -0.854, 0.092);
-	Position(30.458, 22.588, -9.387);
+	Rotation(0.617, 0.315, 0.642, -0.329);
+	Position(35.608, 126.435, -0.552);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(2.464, 0.101, 2.481,  0.537, 0.537, -0.460, 0.460);
+	Bookmark(229.984, 4.229, -2.463,  0.786, -0.026, 0.617, 0.021);
 }
 LightName("HG2_conquest.LGT");
 ControllerManager("StandardCtrlMgr");

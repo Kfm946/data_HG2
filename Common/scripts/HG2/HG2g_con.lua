@@ -304,10 +304,9 @@ function ScriptPostLoad()
   
   regSwitch = OnObjectKill(
     function(object, killer)
-      if (killer ~= nil) then
+      if (killer ~= nil)then
         print("\nOnObjectKill() with args:", object, killer)
       end 
-      --TODO: Teleport exploring players back to lobby.
       local name = GetEntityName(object)
       if name == "reg_switch" then
         if game_state < GRACE then
