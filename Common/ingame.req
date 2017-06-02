@@ -37,6 +37,8 @@ ucft
     REQN
     {
         "class"
+        "com_item_weaponrecharge2"
+        "com_item_healthrecharge2"
         "com_item_powerup_dual2"
 		"com_item_powerup_dual_fake"
 		"com_item_powerup_onehit"

@@ -3,8 +3,8 @@ SaveType(0);
 
 Camera("camera")
 {
-	Rotation(0.617, 0.315, 0.642, -0.329);
-	Position(35.608, 126.435, -0.552);
+	Rotation(0.588, 0.127, 0.781, -0.169);
+	Position(-45.758, 123.025, 109.170);
 	FieldOfView(55.400);
 	NearPlane(1.000);
 	FarPlane(5000.000);
@@ -18,7 +18,7 @@ Camera("camera")
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
 	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
-	Bookmark(229.984, 4.229, -2.463,  0.786, -0.026, 0.617, 0.021);
+	Bookmark(11.455, 20.161, 13.545,  0.170, 0.091, -0.865, 0.464);
 }
 LightName("HG2.LGT");
 TerrainName("HG2.ter");
@@ -619,7 +619,7 @@ Object("hg2_bldg_large8", "hg2_bldg_large1", 37656865)
 
 Object("tat2_bldg_dockingbay_03", "tat2_bldg_dockingbay_03", 135820876)
 {
-	ChildRotation(-0.000, 0.000, -1.000, 0.000);
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
 	ChildPosition(288.000, 0.000, 0.000);
 	SeqNo(135820876);
 	Team(0);
@@ -655,7 +655,7 @@ Object("exp_shield_blue2", "hg2_prop_hanger_shield_blue", 394295843)
 
 Object("tat2_bldg_dockingbay_04", "tat2_bldg_dockingbay_04", 498944339)
 {
-	ChildRotation(-0.000, 0.000, -1.000, 0.000);
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
 	ChildPosition(288.000, 0.000, 0.000);
 	SeqNo(498944339);
 	Team(0);
@@ -678,6 +678,17 @@ Object("hg2_bldg_platform_ramp_1", "hg2_bldg_platform_ramp_1", 927281953)
 	SeqNo(927281953);
 	Team(0);
 	NetworkId(-1);
+}
+
+Object("lobby_health", "hg2_item_healthrecharge2", 949387755)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(474.000, -13.500, -46.000);
+	SeqNo(949387755);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("40.0");
 }
 
 Object("hg2_bldg_arch1", "hg2_bldg_arch", 960861072)
@@ -779,6 +790,17 @@ Object("hg2_bldg_large6", "hg2_bldg_large1", 2142615056)
 	NetworkId(-1);
 }
 
+Object("lobby_ammo", "hg2_item_weaponrecharge2", -2016111106)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(472.000, -13.500, -47.000);
+	SeqNo(-2016111106);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("40.0");
+}
+
 Object("hg2_bldg_apt2", "hg2_bldg_apt1", -1910879391)
 {
 	ChildRotation(1.000, 0.000, 0.000, 0.000);
@@ -817,7 +839,7 @@ Object("hg2_bldg_large4", "hg2_bldg_large1", -1277914719)
 
 Object("tat2_bldg_dockingbay_02", "tat2_bldg_dockingbay_02", -996165310)
 {
-	ChildRotation(-0.000, 0.000, -1.000, 0.000);
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
 	ChildPosition(288.000, 0.000, 0.000);
 	SeqNo(-996165310);
 	Team(0);
@@ -853,7 +875,7 @@ Object("Kiste1", "Kiste1", -797089069)
 
 Object("tat2_bldg_dockingbay_2", "tat2_bldg_dockingbay_01", -670065036)
 {
-	ChildRotation(-0.000, 0.000, -1.000, 0.000);
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
 	ChildPosition(288.000, 0.000, 0.000);
 	SeqNo(-670065036);
 	Team(0);
@@ -867,6 +889,17 @@ Object("hg2_prop_SD_switch", "hg2_prop_SD_switch", -495893533)
 	SeqNo(-495893533);
 	Team(0);
 	NetworkId(-1);
+}
+
+Object("center_ammo", "hg2_item_weaponrecharge2", -417902846)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(0.000, -5.000, 0.000);
+	SeqNo(-417902846);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("20.0");
 }
 
 Object("Kisten5_cluster", "Kisten5_cluster", -365158843)
@@ -903,6 +936,17 @@ Object("exp_shield_blue1", "hg2_prop_hanger_shield_blue_nc", -323753054)
 	SeqNo(-323753054);
 	Team(0);
 	NetworkId(-1);
+}
+
+Object("center_health", "hg2_item_healthrecharge2", -269690928)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(0.000, -5.000, 0.000);
+	SeqNo(-269690928);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("20.0");
 }
 
 Object("hg2_bldg_lobby", "hg2_bldg_lobby", -240870696)

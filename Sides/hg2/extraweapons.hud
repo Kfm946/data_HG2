@@ -11,6 +11,7 @@ ViewPort("Transforms")
     {
         NameMesh("all_weap_inf_de10", "com_inv_mesh")
         NameMesh("all_weap_inf_ce14c", "com_inv_mesh")
+        NameMesh("all_weap_inf_fettrifle", "com_inv_mesh")
  
         
         EventInput("player1.weapon1.change")
@@ -54,6 +55,13 @@ ViewPort("Transforms")
                 }
 				
 				MeshInfo("all_weap_inf_ce14c")
+                {
+                    Position(-0.258881, 0.364262, 0.013887, "Viewport")
+                    Rotation(0.804269, 90.747269, 359.999695)
+                    Scale(0.720000, 0.720000, 0.720000)
+                }
+				
+				MeshInfo("all_weap_inf_fettrifle")
                 {
                     Position(-0.258881, 0.364262, 0.013887, "Viewport")
                     Rotation(0.804269, 90.747269, 359.999695)

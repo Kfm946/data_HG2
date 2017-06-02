@@ -34,4 +34,4 @@ ActiveSpinNode = "Equipment_Operator_Arm_Socket"
 
 [InstanceProperties]
 EffectRegion        = ""
-Radius          = 30.0
+Radius          = 50.0

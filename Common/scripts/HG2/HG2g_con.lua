@@ -527,8 +527,6 @@ function ScriptPostLoad()
         StartTimer(VisualTimer)
         StartTimer(RulesTimer)
         
-        --TODO: Implement this.
-        --RestoreAmmo()
         ShowMessageText("level.HG2.grace.rule3")
         ShowMessageText("level.HG2.grace.rule1")
         ShowMessageText("level.HG2.grace.rule2")
@@ -754,6 +752,8 @@ function ScriptPostLoad()
       print("\nThe Games have begun!\n")
       ShowMessageText("level.HG2.games.begin")
       
+      KillObject("center_health")
+      KillObject("center_ammo")
  
       UnblockPlanningGraphArcs("games1");
       UnblockPlanningGraphArcs("games2");
@@ -869,10 +869,9 @@ function ScriptPostLoad()
 ---------------------------------------------------------------------------
 
 function ScriptInit()
-    
+
     ReadDataFile("ingame.lvl")
     ReadDataFile("dc:ingame.lvl")
-
 
 
     SetMaxFlyHeight(40)
